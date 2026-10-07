@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "about": "The install steps. One source: the brain-setup skill follows it, the checklist page is made from it, the brain check reads it. 'who' is us (the installer, optional: a do-it-yourself brain skips the factory stage), owner (three things a person does before Claude takes over), or claude (Claude leads; the owner answers).",
+  "steps": [
+    {
+      "id": "factory-copy",
+      "stage": "factory",
+      "who": "us",
+      "minutes": 2,
+      "title": "Make the brain from the template",
+      "do": "python tools/brain_install.py new --name ... --owner ... --website ... --out E:/Clients/<slug>-brain"
+    },
+    {
+      "id": "factory-website",
+      "stage": "factory",
+      "who": "us",
+      "minutes": 3,
+      "title": "Pull the website into raw/website",
+      "do": "Done by 'new' when --website is given. Skip if there is no website."
+    },
+    {
+      "id": "factory-profile",
+      "stage": "factory",
+      "who": "us",
+      "minutes": 20,
+      "title": "Fill the business facts from the website and the call notes",
+      "do": "Fill config/business.json from raw/website/<site>/_found.json and the call notes. Every filled field gets a line in 'sources'. Leave a field blank rather than guess. Drop the call notes into raw/inbox."
+    },
+    {
+      "id": "factory-build",
+      "stage": "factory",
+      "who": "us",
+      "minutes": 10,
+      "title": "Build the brain from what we already know",
+      "do": "Open the brain in Claude and say: build from intake. It drafts every page and writes setup/review.md. No owner needed."
+    },
+    {
+      "id": "factory-package",
+      "stage": "factory",
+      "who": "us",
+      "minutes": 2,
+      "title": "Package it and send the download",
+      "do": "python tools/brain_install.py package <brain>. Send the owner the ZIP and setup/checklist.html."
+    },
+    {
+      "id": "owner-claude",
+      "stage": "owner",
+      "who": "owner",
+      "minutes": 5,
+      "title": "Install the Claude app",
+      "do": "Download the Claude app from claude.ai/download, install it, and sign in with a Claude Pro plan or higher."
+    },
+    {
+      "id": "owner-unzip",
+      "stage": "owner",
+      "who": "owner",
+      "minutes": 2,
+      "title": "Put your brain folder in Documents",
+      "do": "Open the ZIP you received and drag the folder inside it into your Documents folder."
+    },
+    {
+      "id": "owner-open",
+      "stage": "owner",
+      "who": "owner",
+      "minutes": 2,
+      "title": "Open it in Claude and type the start line",
+      "do": "In the Claude app, click Code, choose that folder, and type: install my brain"
+    },
+    {
+      "id": "setup-welcome",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 2,
+      "title": "Welcome and the plan",
+      "do": "Say what will happen, how long it takes, and that the owner can stop any time and pick it up by typing 'install my brain' again."
+    },
+    {
+      "id": "setup-computer",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 2,
+      "title": "Check this computer",
+      "do": "Quietly check what is here: git (git --version), Python (python --version, then py --version; the Microsoft Store opening means no Python). Install nothing now. Note what is missing in progress.notes; only setup-backup needs any of it."
+    },
+    {
+      "id": "setup-website",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 5,
+      "title": "Read the website",
+      "do": "Skip if factory-website is done. Ask first: 'Do you have a website?' If yes: read the home page and the about, services, pricing, FAQ and contact pages with your web tool, and save each page's text to raw/website/<site>/<page>.md with the address and date at the top. Never save pages that look like spam (free e-book or PDF download posts): tell the owner the site may be hacked. If no website: ask for a Google Business listing or Facebook page instead and read that the same way; if there is nothing, skip (note it, and add 'no website' to wiki/automation-candidates.md as an opportunity)."
+    },
+    {
+      "id": "setup-questions",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 20,
+      "title": "Questions about the business",
+      "do": "Six short rounds, one message each, three to five questions per round, with an example beside any question that might be new: (1) the business: name, what you do in one sentence, where, since when; (2) contact: phone, email, hours; (3) customers: your best kind of customer, who you turn away, what they ask most; (4) team and tools: who does what, who can say yes to things (for example a discount or a refund), which apps run the work (for example the app on your techs' tablets, your calendar, your invoicing); (5) rules: what Claude must never do, the most it may promise or discount, customers or topics to stay away from; (6) voice: three words for how you sound, words you never use. In each round show what is already known with its source first, then ask only what is missing. Save facts to config/business.json with the source 'owner, in chat, <date>'; rules go in the owner's rules table in CLAUDE.md. If setup/review.md exists, walk it instead of the rounds it already covers."
+    },
+    {
+      "id": "setup-files",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 10,
+      "title": "Drop in your business files",
+      "do": "Open raw/inbox in the owner's file window for them (Windows: explorer raw\\inbox, which reports an error code even when it works, so ask 'did a folder window open?'; Mac: open raw/inbox). Ask for files three at a time: first a price list, two or three real quotes or invoices, and the questions customers ask; then reviews, checklists or how-to steps for a job, and two emails you wrote that sound like you. A screenshot or a photo is fine. If quotes live in an app, ask for a screenshot or a PDF printed from it. They can also paste text into the chat. Confirm each file by name as it arrives. Before saving anything, read each file for passwords, keys or card numbers."
+    },
+    {
+      "id": "setup-build",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 10,
+      "title": "Build the brain",
+      "do": "Run the build-from-intake skill on everything gathered (if factory-build is done, run file-it on the new files and update the pages instead). Then show the owner, in five lines, what was built, and go through setup/review.md: confirm facts, answer questions. Fix each page as you go."
+    },
+    {
+      "id": "setup-week",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 15,
+      "title": "Map the week, and the job that eats the most time",
+      "do": "Ask for the jobs done every week. For each: does it repeat weekly? same steps every time? does Claude already have what it needs? Write wiki/automation-candidates.md: job, how often, hours a week, same steps, has what it needs, route (automation = fixed steps / AI automation = fixed steps with one judgment / agent = steps change every time / keep by hand). Then map the biggest job in small steps with its what-ifs (what if the customer does not answer, what if a part is missing) into wiki/processes/<job>.md: what starts it, the steps, the what-ifs, who owns it, what done looks like."
+    },
+    {
+      "id": "setup-first-job",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 15,
+      "title": "Do one real job together, then keep it as a skill",
+      "do": "Pick a real task from this week (a customer reply, a quote, a post). Do it from the brain, showing which pages were used; it goes in drafts/. Save any correction with remember-this. Then write .claude/skills/<job-name>/SKILL.md: a one-line 'use when', the steps exactly as just done, the pages it reads, what needs the owner's yes. Add a row to 'What already exists' in CLAUDE.md."
+    },
+    {
+      "id": "setup-backup",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 10,
+      "title": "Keep a safe copy",
+      "do": "Two ways; recommend the first unless an installer or technician works on this brain. (A) Cloud drive, two actions: if the computer has OneDrive, Google Drive or Dropbox, move this folder into it (say exactly where: 'in File Explorer, drag the folder onto OneDrive on the left'), then reopen it in Claude from there. Done: it saves itself. (B) GitHub, for working with a technician: one click at a time, wait for 'done' after each: make a free account at github.com (it sends an email code and may show a puzzle; pick the free plan); install GitHub Desktop from desktop.github.com; open it and click Sign in, then Authorize in the browser that opens; on 'Configure Git' click Finish; File, Add local repository, Choose, then Documents and this folder; if it says it is not a repository, click the small 'create a repository' link, then Create repository; click Publish repository, keep 'Keep this code private' ticked, Publish. Then ask them to invite the technician: on github.com, the repository, Settings, Collaborators, Add people. If they skip both, note it."
+    },
+    {
+      "id": "setup-finish",
+      "stage": "setup",
+      "who": "claude",
+      "minutes": 5,
+      "title": "Check and finish",
+      "do": "Run the brain check (python or py tools/brain_check.py --write-index, then --stage installed). Without Python, do the check yourself by reading the files, using the list in the brain-setup skill ('The check by hand'), and fix what fails; with a GitHub copy the check also runs there on every save. Mark installed. Teach the three phrases: file it, catch me up, remember this."
+    }
+  ]
+}

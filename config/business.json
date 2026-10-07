@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "shapes": {
+    "services": "one per item: name, price (number or text like 'from $450'), unit, company (only when several)",
+    "team": "one per person: name, role, decides (what this person says yes to), company (only when several)",
+    "companies": "one per company: name, role, website, page",
+    "sources": "every filled field gets a line: field name -> where the value came from and when",
+    "per_company": "with several companies, hours, address and ideal_customer may be an object: {\"<company name>\": value}"
+  },
+  "name": "Basic American Enterprises",
+  "owner": "Fran",
+  "what_we_do": "",
+  "companies": [
+    {
+      "name": "Basic American Enterprises",
+      "role": "the parent: a fund and incubator; Fran is the fund manager",
+      "website": "https://basicamericanenterprises.com",
+      "page": "wiki/companies/basic-american-enterprises.md"
+    },
+    {
+      "name": "Basic American Intelligence",
+      "role": "rep category: AI; contracts with Custom Tailored Agents",
+      "website": "",
+      "page": "wiki/companies/basic-american-intelligence.md"
+    },
+    {
+      "name": "Basic American Networks",
+      "role": "rep category: telecom",
+      "website": "https://basicamericannetworks.com",
+      "page": "wiki/companies/basic-american-networks.md"
+    }
+  ],
+  "phone": "",
+  "email": "",
+  "website": "https://basicamericanenterprises.com",
+  "address": "",
+  "hours": "",
+  "service_area": "",
+  "services": [],
+  "ideal_customer": "",
+  "team": [],
+  "tools": [],
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "linkedin": "",
+    "google_business": ""
+  },
+  "voice": {
+    "three_words": [],
+    "never_say": []
+  },
+  "sources": {}
+}

@@ -1,0 +1,33 @@
+{
+  "source": "https://basicamericannetworks.com",
+  "pulled": "2026-10-07",
+  "pages": [
+    {
+      "file": "home.md",
+      "url": "https://basicamericannetworks.com"
+    },
+    {
+      "file": "about.md",
+      "url": "http://basicamericannetworks.com/about/"
+    },
+    {
+      "file": "contact.md",
+      "url": "https://basicamericannetworks.com/contact/"
+    }
+  ],
+  "phone": [
+    "(604) 462-7623",
+    "(775) 635-9295",
+    "(909) 861-6326",
+    "5625733200"
+  ],
+  "email": [
+    "Dibotmainofficeinfo@info.com",
+    "Dibotmanagementoffice@info.com",
+    "Marketingcompany@gmail.com"
+  ],
+  "social": {},
+  "thin_pages": [],
+  "skipped_as_spam": [],
+  "note": "Suggestions only. Confirm each with the owner before it goes into config/business.json."
+}

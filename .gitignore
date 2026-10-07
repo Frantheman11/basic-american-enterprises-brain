@@ -1,0 +1,12 @@
+# Secrets never live in the brain
+.env
+*.env
+*.key
+*.pem
+credentials*.json
+*token*.json
+# Machine-local
+.claude/settings.local.json
+__pycache__/
+.DS_Store
+Thumbs.db

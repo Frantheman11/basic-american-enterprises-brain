@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Brain setup checklist</title>
+<style>
+:root{--bg:#fbfaf7;--ink:#1d1c1a;--muted:#5d5a54;--line:#e3dfd6;--accent:#1f5f4a;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--ink:#f1efe9;--muted:#a9a59c;--line:#33312d;--accent:#7cc4a8;--card:#1c1b19}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 80px}h1{font-size:34px;line-height:1.2;margin:0 0 8px}
+.lede{color:var(--muted);margin:0 0 32px}h2{font-size:24px;margin:40px 0 12px}
+ol{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:32px 1fr;gap:4px 12px}
+li input{width:24px;height:24px;margin:4px 0 0;accent-color:var(--accent)}li strong{display:block}
+li p{grid-column:2;margin:0;color:var(--muted);font-size:18px}li .t{font-size:16px;color:var(--muted)}
+li.done strong{text-decoration:line-through;color:var(--muted)}
+.say{background:var(--card);border-left:4px solid var(--accent);padding:14px 18px;border-radius:8px;margin-top:24px}
+code{font-size:18px}a{color:var(--accent)}.start{font-size:22px}.start button{font:inherit;font-size:16px;margin-left:8px;padding:6px 14px;border-radius:8px;border:1px solid var(--accent);background:var(--card);color:var(--accent);cursor:pointer}
+</style></head><body><main>
+<h1>Set up your second brain</h1>
+<p class="lede">Basic American Enterprises · Part 1 takes about 9 minutes. Part 2 is a conversation with Claude, about 94 minutes, and you can stop and pick it up any time.</p>
+<div class="say"><strong>Before you start:</strong> a Claude Pro plan or higher (claude.ai, about $20 a month, paid to Anthropic), and a computer. Windows or Mac.</div>
+<h2>Part 1: three things you do</h2><ol><li><input type="checkbox" id="owner-claude" aria-label="Done"><label for="owner-claude"><strong>Install the Claude app</strong><span class="t">About 5 minutes</span></label><p>Download the Claude app from <a href="https://claude.ai/download">claude.ai/download</a>, install it, and sign in with a Claude Pro plan or higher.</p></li><li><input type="checkbox" id="owner-unzip" aria-label="Done"><label for="owner-unzip"><strong>Put your brain folder in Documents</strong><span class="t">About 2 minutes</span></label><p>Open the ZIP you received and drag the folder inside it into your Documents folder.</p></li><li><input type="checkbox" id="owner-open" aria-label="Done"><label for="owner-open"><strong>Open it in Claude and type the start line</strong><span class="t">About 2 minutes</span></label><p>In the Claude app, click Code, choose that folder, and type: install my brain</p></li></ol>
+<div class="say start">Type this to Claude: <strong id="start-line">install my brain</strong> <button type="button" id="copy-start">Copy</button></div>
+<h2>Part 2: Claude does the rest, and asks you as it goes</h2><ol><li><input type='checkbox' id='setup-welcome' aria-label='Done'><label for='setup-welcome'><strong>Welcome and the plan</strong><span class='t'>About 2 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-computer' aria-label='Done'><label for='setup-computer'><strong>Check this computer</strong><span class='t'>About 2 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-website' aria-label='Done'><label for='setup-website'><strong>Read the website</strong><span class='t'>About 5 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-questions' aria-label='Done'><label for='setup-questions'><strong>Questions about the business</strong><span class='t'>About 20 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-files' aria-label='Done'><label for='setup-files'><strong>Drop in your business files</strong><span class='t'>About 10 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-build' aria-label='Done'><label for='setup-build'><strong>Build the brain</strong><span class='t'>About 10 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-week' aria-label='Done'><label for='setup-week'><strong>Map the week, and the job that eats the most time</strong><span class='t'>About 15 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-first-job' aria-label='Done'><label for='setup-first-job'><strong>Do one real job together, then keep it as a skill</strong><span class='t'>About 15 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-backup' aria-label='Done'><label for='setup-backup'><strong>Keep a safe copy</strong><span class='t'>About 10 minutes, with Claude</span></label></li><li><input type='checkbox' id='setup-finish' aria-label='Done'><label for='setup-finish'><strong>Check and finish</strong><span class='t'>About 5 minutes, with Claude</span></label></li></ol>
+<div class="say">After setup, three things to say: <strong>file it</strong> · <strong>catch me up</strong> · <strong>remember this</strong></div>
+</main><script>
+var cb=document.getElementById('copy-start');if(cb)cb.addEventListener('click',function(){try{navigator.clipboard.writeText('install my brain');cb.textContent='Copied'}catch(e){}});
+document.querySelectorAll('input[type=checkbox]').forEach(function(b){
+  var k='brain-check-'+b.id;try{b.checked=localStorage.getItem(k)==='1'}catch(e){}
+  function paint(){b.closest('li').classList.toggle('done',b.checked)}paint();
+  b.addEventListener('change',function(){try{localStorage.setItem(k,b.checked?'1':'0')}catch(e){}paint()});
+});
+</script></body></html>
