@@ -9,7 +9,7 @@
   },
   "name": "Basic American Enterprises",
   "owner": "Fran",
-  "what_we_do": "",
+  "what_we_do": "A fund and incubator with distribution built in: investors buy into the fund, Fran allocates across the portfolio, and every portfolio company gets lead generation and a national rep network (50 key people, 3 regions). 'Smart money invests in smart American businesses.'",
   "companies": [
     {
       "name": "Basic American Enterprises",
@@ -30,15 +30,26 @@
       "page": "wiki/companies/basic-american-networks.md"
     }
   ],
-  "phone": "",
-  "email": "",
+  "phone": "562-573-3200",
+  "email": "fran@basicamericanenterprises.com",
   "website": "https://basicamericanenterprises.com",
   "address": "",
   "hours": "",
   "service_area": "",
   "services": [],
-  "ideal_customer": "",
-  "team": [],
+  "ideal_customer": {
+    "Basic American Enterprises": "investors (smart money) and American companies that want capital plus a sales force (smart companies)",
+    "Basic American Intelligence": "established independent reps who sell AI systems",
+    "Basic American Networks": "established independent reps who sell telecom"
+  },
+  "team": [
+    {
+      "name": "Fran",
+      "role": "founder and fund manager",
+      "decides": "how investor money is allocated across the portfolio; which reps join",
+      "company": "Basic American Enterprises"
+    }
+  ],
   "tools": [],
   "social": {
     "instagram": "",
@@ -50,5 +61,11 @@
     "three_words": [],
     "never_say": []
   },
-  "sources": {}
+  "sources": {
+    "what_we_do": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md)",
+    "phone": "basicamericanenterprises.com contact details, pulled 2026-10-07 (raw/website/basicamericanenterprises-com/_found.json)",
+    "email": "basicamericanenterprises.com contact details, pulled 2026-10-07 (raw/website/basicamericanenterprises-com/_found.json)",
+    "team": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md)",
+    "ideal_customer": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md)"
+  }
 }
