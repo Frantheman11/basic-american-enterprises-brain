@@ -21,6 +21,7 @@
     "setup-questions: Fran asked 'do we have a second brain now?' mid-setup; it was not clear to him that setup was still running",
     "setup-questions: resumed 2026-10-08; rounds 1-3 done; round 4 (team and tools) started, Fran asked to focus on Basic American Enterprises, then switched to website changes; next: BAE team roles (Louis Hayner, Tom Purcell, Michael), portfolio check, apps, regional directors; then rounds 5 (rules) and 6 (voice)",
     "setup-questions: Fran answers in short spoken-style lines and changes topic often; keep each round to 3-4 questions",
-    "setup-computer: no git, no Python on this computer; setup-backup and setup-finish will need the cloud-drive route and the check by hand"
+    "setup-computer: no git, no Python on this computer; setup-backup and setup-finish will need the cloud-drive route and the check by hand",
+    "setup-computer: git 2.55 installed 2026-10-08 with winget (Fran asked); not on PATH until Claude restarts, full path C:\\Program Files\\Git\\cmd\\git.exe; repo identity Fran McGrath / fran@basicamericanenterprises.com; no remote yet, so setup-backup is still needed"
   ]
 }
