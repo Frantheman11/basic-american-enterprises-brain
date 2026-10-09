@@ -9,10 +9,12 @@
     "owner-open": "2026-10-07",
     "setup-welcome": "2026-10-07",
     "setup-computer": "2026-10-07",
-    "setup-website": "2026-10-07 (skipped: factory-website already done)"
+    "setup-website": "2026-10-07 (skipped: factory-website already done)",
+    "setup-backup": "2026-10-09 (Google Drive for desktop, franmcgrath11@gmail.com, syncs the folder in place on the Desktop)"
   },
   "timing": {
-    "setup-questions": { "started": "2026-10-07T00:00:00" }
+    "setup-questions": { "started": "2026-10-07T00:00:00" },
+    "setup-backup": { "started": "2026-10-08T22:56:52", "finished": "2026-10-08T23:40:00" }
   },
   "notes": [
     "owner-unzip: folder is on the Desktop (2nd Brain), not in Documents; works fine there",
@@ -20,8 +22,13 @@
     "setup-questions: paused 2026-10-07 after round 1, question 1; next: home office city, year started, Central and East offices",
     "setup-questions: Fran asked 'do we have a second brain now?' mid-setup; it was not clear to him that setup was still running",
     "setup-questions: resumed 2026-10-08; rounds 1-3 done; round 4 (team and tools) started, Fran asked to focus on Basic American Enterprises, then switched to website changes; next: BAE team roles (Louis Hayner, Tom Purcell, Michael), portfolio check, apps, regional directors; then rounds 5 (rules) and 6 (voice)",
+    "setup-questions: round 4 (team and tools) skipped by Fran 2026-10-08; team roles, portfolio check, apps and regional directors left blank",
     "setup-questions: Fran answers in short spoken-style lines and changes topic often; keep each round to 3-4 questions",
     "setup-computer: no git, no Python on this computer; setup-backup and setup-finish will need the cloud-drive route and the check by hand",
-    "setup-computer: git 2.55 installed 2026-10-08 with winget (Fran asked); not on PATH until Claude restarts, full path C:\\Program Files\\Git\\cmd\\git.exe; repo identity Fran McGrath / fran@basicamericanenterprises.com; no remote yet, so setup-backup is still needed"
+    "setup-computer: git 2.55 installed 2026-10-08 with winget (Fran asked); not on PATH until Claude restarts, full path C:\\Program Files\\Git\\cmd\\git.exe; repo identity Fran McGrath / fran@basicamericanenterprises.com; no remote yet, so setup-backup is still needed",
+    "setup-backup: old Google Drive (v87) was broken; Fran did a clean reinstall 2026-10-08 (now v132) and restarted at 11:10 pm; Drive opened for 8 seconds after the restart, then closed; no G: drive yet",
+    "setup-backup: on 2026-10-09 Fran did not remember where the backup stopped after the restart; next time, write the exact next click before asking for a restart",
+    "setup-backup: Fran chose the Google Drive of franmcgrath11@gmail.com for the safe copy (2026-10-09); Fran first went to Google's download page instead of opening the installed app",
+    "setup-backup: cause found 2026-10-09: Drive v132 (latest) quit in 5 s because old saved account data in %LOCALAPPDATA%\\Google\\DriveFS carried an 'application deprecated' flag; renamed that folder to DriveFS.old-2026-10-09 (not deleted); Drive then stayed open and showed the sign-in window"
   ]
 }

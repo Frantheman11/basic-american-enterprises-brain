@@ -21,3 +21,4 @@ One line per change, newest last: date · what · from where.
 2026-10-08 · proposal 4344: heat exchanger changed to AC (HIX55 115/230 VAC, per VoltAire BC0117F); power, alarm and feed sections and cover letter updated; added 2 door mockup photos to section 5 (typo 'compartment' fixed in detail image), drawings kept; PDF rebuilt (10 pages, 1.2 MB); not sent · Fran, in chat
 2026-10-08 · setup round 1-3 answers saved to config (since, address, hours, services, customers, incubator description); started websites brief handoffs/websites-2026-10.md · Fran, in chat
 2026-10-08 · installed git; first save of the day's work (commit 8e31c34); no online copy yet · Fran, in chat
+2026-10-09 · setup-backup done: Google Drive for desktop syncs this folder to franmcgrath11@gmail.com; old broken Drive settings set aside (DriveFS.old-2026-10-09) · Fran, in chat

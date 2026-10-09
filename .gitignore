@@ -10,3 +10,7 @@ credentials*.json
 __pycache__/
 .DS_Store
 Thumbs.db
+
+# Google Drive sync working folders
+.tmp.drivedownload/
+.tmp.driveupload/
