@@ -1,9 +1,26 @@
 {
-  "status": "factory",
+  "status": "setup",
   "installer_version": "0.1.1",
   "done": {
     "factory-copy": "2026-10-07",
-    "factory-website": "2026-10-07"
+    "factory-website": "2026-10-07",
+    "owner-claude": "2026-10-07",
+    "owner-unzip": "2026-10-07",
+    "owner-open": "2026-10-07",
+    "setup-welcome": "2026-10-07",
+    "setup-computer": "2026-10-07",
+    "setup-website": "2026-10-07 (skipped: factory-website already done)"
   },
-  "notes": []
+  "timing": {
+    "setup-questions": { "started": "2026-10-07T00:00:00" }
+  },
+  "notes": [
+    "owner-unzip: folder is on the Desktop (2nd Brain), not in Documents; works fine there",
+    "owner-open: an older brain (Fran-Second-Brain) was also on the Desktop; Fran opened that one first and chose this newer one",
+    "setup-questions: paused 2026-10-07 after round 1, question 1; next: home office city, year started, Central and East offices",
+    "setup-questions: Fran asked 'do we have a second brain now?' mid-setup; it was not clear to him that setup was still running",
+    "setup-questions: resumed 2026-10-08; rounds 1-3 done; round 4 (team and tools) started, Fran asked to focus on Basic American Enterprises, then switched to website changes; next: BAE team roles (Louis Hayner, Tom Purcell, Michael), portfolio check, apps, regional directors; then rounds 5 (rules) and 6 (voice)",
+    "setup-questions: Fran answers in short spoken-style lines and changes topic often; keep each round to 3-4 questions",
+    "setup-computer: no git, no Python on this computer; setup-backup and setup-finish will need the cloud-drive route and the check by hand"
+  ]
 }

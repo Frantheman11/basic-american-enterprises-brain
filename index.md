@@ -5,6 +5,8 @@ If Python is missing, edit it by hand, one line per page; the next rebuild repla
 
 ## Wiki
 
+- [C-7 license exam prep](wiki/c7-exam-prep.md) - Fran's study plan, fees and practice scores
+- [C-7 study sheet](wiki/c7-study-sheet.md) - numbers to memorize for the C-7 trade test
 - [What to automate first](wiki/automation-candidates.md) (not written yet)
 - [The business](wiki/business.md) (not written yet)
 - [Our customers](wiki/customers.md) (not written yet)

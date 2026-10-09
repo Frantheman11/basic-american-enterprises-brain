@@ -9,38 +9,52 @@
   },
   "name": "Basic American Enterprises",
   "owner": "Fran",
-  "what_we_do": "A fund and incubator with distribution built in: investors buy into the fund, Fran allocates across the portfolio, and every portfolio company gets lead generation and a national rep network (50 key people, 3 regions). 'Smart money invests in smart American businesses.'",
+  "what_we_do": "An incubator that develops start-ups and gives them the core services of an accelerator or incubator, plus distribution: the territories (50 key people, 3 regions) are the distribution, with lead generation and a national rep network for every portfolio company. Basic American Intelligence adds core technology (AI) accelerator features inside each start-up. The strategy now being formulated has two aims: raise capital for a planned fund ('smart money'), and establish territory reps and distributors for the products and services of the incubator's companies. 'Smart money invests in smart American businesses.'",
   "companies": [
     {
       "name": "Basic American Enterprises",
-      "role": "the parent: a fund and incubator; Fran is the fund manager",
+      "role": "the parent: an incubator with distribution built in; a fund is planned, with Fran as fund manager",
       "website": "https://basicamericanenterprises.com",
       "page": "wiki/companies/basic-american-enterprises.md"
     },
     {
       "name": "Basic American Intelligence",
-      "role": "rep category: AI; contracts with Custom Tailored Agents",
+      "role": "rep category: AI; contracts with Custom Tailored Agents; part of the incubator's services: provides core technology (AI) accelerator features inside each start-up (owner, 2026-10-08)",
       "website": "",
       "page": "wiki/companies/basic-american-intelligence.md"
     },
     {
       "name": "Basic American Networks",
-      "role": "rep category: telecom",
+      "role": "rep category: telecom; a DBA (trade name) of Basic American Enterprises LLC, so same company, same start year",
       "website": "https://basicamericannetworks.com",
+      "phone": "310.488.7205",
       "page": "wiki/companies/basic-american-networks.md"
     }
   ],
   "phone": "562-573-3200",
   "email": "fran@basicamericanenterprises.com",
   "website": "https://basicamericanenterprises.com",
-  "address": "",
-  "hours": "",
+  "since": "Basic American Enterprises first incorporated by Fran McGrath in 1993; Basic American Enterprises LLC started in 2020",
+  "address": "7076 Island Village Dr, Long Beach, CA 90803 (home office; all companies)",
+  "hours": "Mon to Fri, 8:30 am to 5 pm Pacific",
+  "regional_offices": "Central and East: not set yet",
+  "turn_away": "none set; few people turned away so far (owner, 2026-10-08)",
+  "common_questions": "none yet: little marketing done so far (owner, 2026-10-08)",
   "service_area": "",
-  "services": [],
+  "services": [
+    { "name": "Telecommunications services (all)", "price": "", "unit": "", "company": "Basic American Networks" },
+    { "name": "Cloud services (all)", "price": "", "unit": "", "company": "Basic American Networks" },
+    { "name": "Unique integration services (for example the G Fiber cabinet cooling retrofit)", "price": "", "unit": "", "company": "Basic American Networks" },
+    { "name": "Low-voltage cabling", "price": "", "unit": "", "company": "Basic American Networks" },
+    { "name": "Security networks", "price": "", "unit": "", "company": "Basic American Networks" },
+    { "name": "Perimeter and access control", "price": "", "unit": "", "company": "Basic American Networks" },
+    { "name": "Other commodity service offerings", "price": "", "unit": "", "company": "Basic American Networks" },
+    { "name": "Product offerings", "price": "", "unit": "", "company": "Basic American Networks" }
+  ],
   "ideal_customer": {
-    "Basic American Enterprises": "investors (smart money) and American companies that want capital plus a sales force (smart companies)",
+    "Basic American Enterprises": "investors (smart money) and American companies that want capital plus a sales force (smart companies). The strategy is still being formulated, with two aims: raise capital for a fund, and establish territory reps and distributors for the incubator's products and services; not yet open to investors (owner, 2026-10-08)",
     "Basic American Intelligence": "established independent reps who sell AI systems",
-    "Basic American Networks": "established independent reps who sell telecom"
+    "Basic American Networks": "services sold direct to carriers (for example G Fiber), municipal governments, enterprise, and mid-size / mid-tier businesses (owner, 2026-10-08); also recruits established independent reps who sell telecom (call notes, 2026-10-01)"
   },
   "team": [
     {
@@ -48,9 +62,18 @@
       "role": "founder and fund manager",
       "decides": "how investor money is allocated across the portfolio; which reps join",
       "company": "Basic American Enterprises"
+    },
+    {
+      "name": "Fran McGrath",
+      "role": "CEO",
+      "decides": "everything: the only person with decision-making authority at Basic American Networks and Basic American Enterprises (owner, 2026-10-08)",
+      "company": "Basic American Networks"
     }
   ],
   "tools": [],
+  "partners": {
+    "Basic American Networks": "partial list: Towerstream, IoT Data Group, Lumen, GeoLinks, EarthLink, PLDT, Custom Tailored Agents, Ubiquiti, Varnish Software, T-Mobile"
+  },
   "social": {
     "instagram": "",
     "facebook": "",
@@ -62,10 +85,19 @@
     "never_say": []
   },
   "sources": {
-    "what_we_do": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md)",
+    "since": "owner, in chat, 2026-10-08",
+    "address": "owner, in chat, 2026-10-08",
+    "services": "owner, in chat, 2026-10-08 (prices not given)",
+    "partners": "logos on basicamericannetworks.com home page, read 2026-10-08; owner says it is a partial list",
+    "hours": "owner, in chat, 2026-10-08",
+    "regional_offices": "owner, in chat, 2026-10-08 (Central and East not set yet)",
+    "email (all companies, for now)": "owner, in chat, 2026-10-08",
+    "companies.Basic American Networks.role (DBA)": "owner, in chat, 2026-10-08",
+    "what_we_do": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md); confirmed by owner, in chat, 2026-10-07; reframed as incubator first, fund planned, owner, in chat, 2026-10-08",
     "phone": "basicamericanenterprises.com contact details, pulled 2026-10-07 (raw/website/basicamericanenterprises-com/_found.json)",
+    "companies.Basic American Networks.phone": "Fran, in chat, 2026-10-08 (for BAN documents, e.g. G Fiber proposal 4344)",
     "email": "basicamericanenterprises.com contact details, pulled 2026-10-07 (raw/website/basicamericanenterprises-com/_found.json)",
-    "team": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md)",
+    "team": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md); Fran is CEO of Basic American Networks: Fran, in chat, 2026-10-08",
     "ideal_customer": "Fran's call with Sam, 2026-10-01 (raw/inbox/call-notes-2026-10-01.md)"
   }
 }

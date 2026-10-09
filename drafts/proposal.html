@@ -1,0 +1,252 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Proposal: Supplemental Cabinet Cooling Retrofit</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 10.5pt; color: #1d1d1f; line-height: 1.35; }
+  h1 { font-size: 21pt; color: #0b2545; margin: 12pt 0 2pt 0; }
+  h2 { font-size: 14pt; color: #0b2545; margin: 16pt 0 6pt 0; border-bottom: 1.5pt solid #c8102e; padding-bottom: 2pt; }
+  h3 { font-size: 11.5pt; color: #0b2545; margin: 10pt 0 4pt 0; }
+  p { margin: 0 0 7pt 0; }
+  .sub { color: #555555; font-size: 10.5pt; margin-bottom: 10pt; }
+  table.t { border-collapse: collapse; width: 100%; margin: 4pt 0 10pt 0; }
+  table.t th { background: #0b2545; color: #ffffff; text-align: left; padding: 4pt 6pt; font-size: 9.5pt; border: 1px solid #0b2545; }
+  table.t td { padding: 4pt 6pt; border: 1px solid #c9ced6; vertical-align: top; font-size: 9.5pt; }
+  table.t td.k { font-weight: bold; background: #f3f5f8; }
+  .alert { border-left: 5pt solid #c8102e; background: #fbeaec; padding: 8pt 10pt; margin: 10pt 0; }
+  .alert b.t { color: #c8102e; }
+  .info { border-left: 5pt solid #1f6fbf; background: #eaf2fb; padding: 8pt 10pt; margin: 10pt 0; }
+  .tbc { background: #fff3b0; font-weight: bold; }
+  .note { color: #666666; font-style: italic; font-size: 9pt; }
+  .fig { text-align: center; margin: 6pt 0 2pt 0; }
+  ul, ol { margin-top: 0; margin-bottom: 8pt; }
+  li { margin-bottom: 3pt; }
+</style>
+</head>
+<body>
+
+<table style="border-collapse:collapse; width:100%; background:#e3e4e6;">
+<tr>
+<td style="padding:10pt 12pt; width:50%; vertical-align:middle; border:none;"><img src="images/ban-logo.png" width="180" height="69" alt="Basic American Networks"></td>
+<td style="padding:10pt 12pt; text-align:right; vertical-align:middle; border:none; font-size:9pt; color:#333333;"><b style="font-size:10.5pt; color:#1d1d1f;">Basic American Enterprises LLC</b><br>7076 Island Village Dr, Long Beach, CA 90803<br>310.488.7205<br>www.basicamericannetworks.com</td>
+</tr>
+</table>
+<div style="border-bottom:3pt solid #c8102e; margin-bottom:6pt; font-size:2pt;">&nbsp;</div>
+
+<h1>Proposal: Supplemental Cooling Retrofit for Outdoor Fiber Cabinets</h1>
+<p class="sub">ADTRAN MiniOLT (Crossover Enclosure) and Nokia / Google Fiber Compact Cabinet &nbsp;|&nbsp; 8 October 2026</p>
+
+<table class="t">
+<tr><td class="k" style="width:28%">Prepared for</td><td><b>Google Fiber Inc.</b> &nbsp;|&nbsp; Attention: Biswajit De<br>1600 Amphitheatre Parkway, Mountain View, CA 94043</td></tr>
+<tr><td class="k">Prepared by</td><td>Basic American Networks, a Basic American Enterprises LLC company</td></tr>
+<tr><td class="k">Point of contact</td><td>Fran McGrath &nbsp;|&nbsp; 310.488.7205</td></tr>
+<tr><td class="k">Proposal number</td><td>4344</td></tr>
+<tr><td class="k">Valid until</td><td>7 November 2026 (30 days from issue)</td></tr>
+</table>
+
+<h2>1. Introduction</h2>
+<p>Thank you for the opportunity to propose this work. Basic American Networks proposes to add a second, independent cooling unit to each of your outdoor fiber cabinets, so they can carry a planned increase in electronics while running cooler and more reliably. The existing cooling unit in each cabinet stays in place and keeps working.</p>
+<p>The new unit is housed in a <b>custom-fabricated cabinet door with a built-in pocket</b>. The pocket protects the unit from weather and tampering, keeps the cabinet's inside space free for equipment and service, and gives the finished cabinet a factory-built look.</p>
+
+<h2>2. Executive summary</h2>
+<table class="t">
+<tr><th style="width:28%">Item</th><th>Proposal</th></tr>
+<tr><td class="k">Cabinets covered</td><td>ADTRAN MiniOLT in Crossover Enclosure (document 6419254FDCL1-5C) and Nokia / Google Fiber Compact Cabinet, outdoor version (Nokia 3MV00858AA / Vertiv F20200000).</td></tr>
+<tr><td class="k">Solution</td><td>One fabricated cavity door per cabinet, bulging outward, carrying a VoltAire HIX Series closed-loop heat exchanger. Existing cooling stays in service.</td></tr>
+<tr><td class="k">Design heat load</td><td>1,500 W per cabinet: 1,000 W existing + 500 W planned <span class="tbc">[to be confirmed on site]</span>.</td></tr>
+<tr><td class="k">Cooling goal</td><td>Lower cabinet temperature by about 10&deg;C (18&deg;F). The reference point (sensor location, outdoor design temperature) is defined in Phase 1.</td></tr>
+<tr><td class="k">Estimated result (ADTRAN)</td><td>With the HIX55 added, the inside is estimated to run about <b>9.7&deg;C above outdoor air at 1,500 W</b>, compared with about 18&deg;C above outdoor air today at 1,000 W (before sun load; see section 4).</td></tr>
+<tr><td class="k">Approach</td><td>Three phases: (1) Prototype and discovery, (2) Field test and refinement, (3) Production and rollout. See section 8.</td></tr>
+<tr><td class="k">Phase 1 investment</td><td><b>$69,000, fixed price, all-in</b>: survey, engineering, two prototype doors with HIX55 heat exchangers, installation and project management.</td></tr>
+</table>
+
+<h2>3. The challenge, in plain terms</h2>
+<p>The cabinets' existing cooling units work like a <b>radiator, not an air conditioner</b>. They move heat from the sealed inside to the outdoor air without letting outside air, dust or moisture in. That means:</p>
+<ul>
+<li>They can never make the cabinet cooler than the outdoor air.</li>
+<li>Adding 500 W of electronics, about the heat of a small space heater, pushes the inside temperature up unless more cooling capacity is added.</li>
+<li>Sun on the cabinet adds heat that the cooling must also remove.</li>
+</ul>
+<p class="fig"><img src="images/diagram-airflow.png" width="620" height="318" alt="How the cooling works"></p>
+
+<h2>4. Heat exchanger data and cooling estimates</h2>
+<h3>4.1 Existing cooling (from the manufacturers' manuals)</h3>
+<table class="t">
+<tr><th style="width:28%">Cabinet</th><th>Existing heat exchanger</th></tr>
+<tr><td class="k">ADTRAN Crossover Enclosure</td><td>Mounted on <b>top</b> of the equipment chamber. Rated <b>55 W/&deg;C</b> (ADTRAN P/N 1353903). ADTRAN states an effective rating of 1,000 W at 46&deg;C ambient (700 W at 51.7&deg;C), allowing for sun load. Powered from &minus;48 VDC fuse F3 (5 A).</td></tr>
+<tr><td class="k">Nokia / Google Fiber outdoor cabinet</td><td>Mounted on the <b>front door</b>. Rating is not published in the installation guide; <span class="tbc">to be read from the unit's nameplate in Phase 1</span>. Powered from &minus;48 VDC distribution position A.</td></tr>
+</table>
+
+<h3>4.2 Proposed new unit: VoltAire HIX Series (VoltAire document BC0117F)</h3>
+<table class="t">
+<tr><th>Model</th><th>Cooling capacity</th><th>115 VAC current</th><th>230 VAC current</th><th>Size H &times; W &times; D (in)</th><th>Weight</th></tr>
+<tr><td class="k">HIX25</td><td>45 W/&deg;C</td><td colspan="2">Not available in AC (48 VDC only)</td><td>22.8 &times; 11.8 &times; 5.3</td><td>20.1 lb</td></tr>
+<tr><td class="k">HIX35</td><td>63 W/&deg;C</td><td>3.4 A</td><td>0.9 A</td><td>35.5 &times; 17.6 &times; 5.3</td><td>40.3 lb</td></tr>
+<tr><td class="k">HIX45</td><td>81 W/&deg;C</td><td>3.4 A</td><td>1.9 A</td><td>35.5 &times; 17.6 &times; 6.5</td><td>45.6 lb</td></tr>
+<tr><td class="k" style="background:#eaf2fb;">HIX55 (proposed, AC)</td><td style="background:#eaf2fb;"><b>99 W/&deg;C</b></td><td style="background:#eaf2fb;">3.5 A</td><td style="background:#eaf2fb;">1.9 A</td><td style="background:#eaf2fb;">35.5 &times; 17.6 &times; 8.5</td><td style="background:#eaf2fb;">47.5 lb</td></tr>
+</table>
+<p class="note">The new unit is <b>AC powered</b> (VoltAire model HIX055M, 115 VAC, or HIX055N, 230 VAC; voltage chosen at survey). AC models connect through a cord grip and offer optional fan on/off temperature control; VoltAire's fan speed and alarm control board is supplied on 48 VDC models only. All HIX units: operating range &minus;40&deg;C to +70&deg;C; UL 1995 and Type 4(X); closed loop; built to GR-487. The HIX35, 45 and 55 share the same height, width and cabinet cutout, so one door design can take any of the three by setting the pocket depth for the HIX55. VoltAire's ordering page lists 66 and 85 W/&deg;C for the HIX35 and HIX45; its main data table and the unit conversion give 63 and 81, which are used here. To be confirmed with VoltAire.</p>
+
+<h3>4.3 Cooling estimate: ADTRAN cabinet</h3>
+<p>To hold the inside 10&deg;C above outdoor air at 1,500 W, the two units together must move about <b>150 W per &deg;C</b>, before sun load.</p>
+<table class="t">
+<tr><th>Configuration</th><th>Combined rating</th><th>Heat load</th><th>Inside above outdoor air (estimate, before sun)</th></tr>
+<tr><td class="k">Today: existing unit only</td><td>55 W/&deg;C</td><td>1,000 W</td><td>about 18&deg;C</td></tr>
+<tr><td class="k">Existing only, after upgrade</td><td>55 W/&deg;C</td><td>1,500 W</td><td>about 27&deg;C</td></tr>
+<tr><td class="k">Existing + HIX25 (DC only; not an option for AC)</td><td>100 W/&deg;C</td><td>1,500 W</td><td>about 15&deg;C</td></tr>
+<tr><td class="k">Existing + HIX35</td><td>118 W/&deg;C</td><td>1,500 W</td><td>about 12.7&deg;C</td></tr>
+<tr><td class="k">Existing + HIX45</td><td>136 W/&deg;C</td><td>1,500 W</td><td>about 11&deg;C</td></tr>
+<tr><td class="k" style="background:#eaf2fb;">Existing + HIX55 (proposed)</td><td style="background:#eaf2fb;"><b>154 W/&deg;C</b></td><td style="background:#eaf2fb;">1,500 W</td><td style="background:#eaf2fb;"><b>about 9.7&deg;C</b></td></tr>
+</table>
+<p class="note">Estimates divide heat load by the combined published rating at full fan speed. Real results are lower because of sun load, airflow inside the cabinet and fan control. Phase 2 field testing confirms actual performance.</p>
+
+<h3>4.4 Cooling estimate: Nokia cabinet</h3>
+<p>The HIX55 alone moves 99 W/&deg;C, enough on its own to hold about 15&deg;C above outdoor air at 1,500 W. The combined result depends on the existing unit's rating, read from its nameplate in Phase 1.</p>
+
+<div class="alert">
+<b class="t">Important: power supply capacity</b><br>
+The new heat exchanger runs on <b>AC power</b>, so it adds no load to the cabinet's DC rectifiers. It needs an AC circuit at each cabinet, confirmed at survey. The planned 1,500 W of electronics still affects the DC system:<br>
+<b>ADTRAN:</b> two 30 A rectifiers in N+1 (one spare) give about 30 A with backup. 1,500 W at &minus;48 V is about 31 A before the existing cooling unit, so the cabinet would lose its spare rectifier. The rectifier plan must be confirmed.<br>
+<b>Nokia:</b> two 1,000 W rectifiers give 1,000 W with a spare. A 1,500 W load leaves no spare. A rectifier upgrade or load review is required.
+</div>
+
+<h2>5. Proposed solution: the fabricated cavity door</h2>
+<p class="fig"><img src="images/diagram-cavity-door.png" width="600" height="360" alt="Cavity door cross-section"></p>
+<p class="fig"><img src="images/door-mockup.jpg" width="620" height="413" alt="Concept mockup of the fabricated heat exchanger door on two cabinet types"></p>
+<p class="note" style="text-align:center;">Concept mockup: fabricated door with outward pocket for the heat exchanger, smaller door (left) and larger door (right). Final design is set in Phase 1.</p>
+<p class="fig"><img src="images/door-mockup-detail.jpg" width="620" height="413" alt="Closed and open views of the fabricated door, with hinge, gasket, grille and latch details"></p>
+<p class="note" style="text-align:center;">Concept mockup: closed and open views, with stainless steel hinges, continuous weatherproof gasket, intake and exhaust grille and keyed compression latch.</p>
+<h3>5.1 Design requirements (both cabinets)</h3>
+<ul>
+<li><b>Outward pocket:</b> the pocket bulges out from the cabinet, about 9 to 10 in deep, so no inside space is lost.</li>
+<li><b>Seal line:</b> the weather seal sits on the back wall of the pocket, where the unit bolts on with its gasket. Supply and return cutouts and 14 mounting holes follow VoltAire's cutout drawing for the HIX35/45/55.</li>
+<li><b>Openings face the sealed equipment chamber,</b> not the battery compartment, and are not blocked by equipment inside.</li>
+<li><b>The pocket breathes outside air:</b> louvers lined up with the unit's outside intake (bottom) and exhaust (top), insect screen, drain holes at the bottom, and a sloped top with a drip edge.</li>
+<li><b>Baffle</b> inside the pocket between intake and exhaust, so hot exhaust cannot circle back into the intake.</li>
+<li><b>Removable outer grille</b> with tamper-resistant screws, for fan service.</li>
+<li><b>Stiffening frame</b> around the cutout to carry the 47.5 lb unit without flexing the door or the seal.</li>
+<li><b>Hinges recommended</b> in place of lift-off mounting, for safe one-person service.</li>
+<li><b>Keep existing features:</b> door intrusion alarm switch, padlock hasp, security screws, full door gasket.</li>
+<li><b>Power and alarm:</b> AC feed (115 or 230 VAC) through the unit's cord grip, on its own breaker, with a slack loop or weatherproof disconnect at the door hinge. AC models have no built-in fan alarm board, so a fan or temperature alarm to the cabinet alarm panel is designed in Phase 1.</li>
+<li><b>Finish:</b> matches the existing cabinet finish.</li>
+</ul>
+
+<h3>5.2 Cabinet by cabinet</h3>
+<p class="fig"><img src="images/diagram-placement-v2.png" width="620" height="333" alt="Where the new cavity door goes"></p>
+<table class="t">
+<tr><th style="width:24%">Item</th><th style="width:38%">ADTRAN Crossover Enclosure</th><th>Nokia / Google Fiber outdoor cabinet</th></tr>
+<tr><td class="k">Cabinet size</td><td>44.6 in H &times; 24.5 in W &times; 24.5 in D</td><td>Not published for outdoor version; base is 24 &times; 16 in. <span class="tbc">Measure in Phase 1.</span></td></tr>
+<tr><td class="k">Doors</td><td>Front and rear; lift off (hook at bottom, two tamper-proof screws, padlock hasp)</td><td>Front door carries the existing unit; louvered side panels on the battery compartment</td></tr>
+<tr><td class="k">Where the cavity door goes</td><td>Front or rear door, chosen at survey to avoid blocking equipment</td><td><span class="tbc">Confirmed at survey.</span> The power transfer switch sits 1.5 to 2 in behind the cabinet, so the rear is not available.</td></tr>
+<tr><td class="k">Unit</td><td>HIX55, AC</td><td>HIX55, AC, proposed; final model after the existing unit's rating is known</td></tr>
+<tr><td class="k">Power feed</td><td>AC circuit and breaker sized for the HIX55 (3.5 A at 115 VAC or 1.9 A at 230 VAC); source confirmed at survey</td><td>AC circuit and breaker sized for the HIX55; source confirmed at survey</td></tr>
+<tr><td class="k">Clearance in front</td><td>ADTRAN recommends 24 in of pad in front of each door; check against the 9 to 10 in pocket</td><td>Check against the pad and walkway at each site</td></tr>
+</table>
+
+<h2>6. Scope of work</h2>
+<h3>Phase 1: Prototype and discovery (this proposal)</h3>
+<ol>
+<li>Site survey at two client sites, one ADTRAN and one Nokia cabinet: measurements, photographs, existing unit nameplates, heat load, power and alarm review.</li>
+<li>Engineering for both cabinet types: door design and fabrication drawings, cutout layout, thermal estimate with actual data, power and alarm plan.</li>
+<li>Fabrication of two prototype cavity doors, one per cabinet type.</li>
+<li>Supply of two VoltAire HIX55 heat exchangers, one per prototype door.</li>
+<li>Installation of both prototypes, power and alarm connection, and start-up check.</li>
+<li>Project management and a Phase 1 summary report.</li>
+</ol>
+<h3>Phase 2: Field test and refinement</h3>
+<p>Temperature monitoring of both prototypes through hot, sunny, full-load conditions; design changes based on the results; test report and go / no-go recommendation.</p>
+<h3>Phase 3: Production and rollout</h3>
+<p>Fabrication and installation of cavity doors on the remaining cabinets, with as-built records.</p>
+<p>All electrical work is performed by appropriately licensed personnel, in line with the National Electrical Code, local codes and the cabinet manufacturers' instructions.</p>
+
+<h2>7. Phase 1 deliverables</h2>
+<ul>
+<li>Site survey report with measurements and photographs for both cabinet types.</li>
+<li>Door fabrication drawings and cutout drawings for each cabinet type.</li>
+<li>Bill of materials, wiring and alarm diagrams.</li>
+<li>Two prototype cavity doors with HIX55 heat exchangers, installed and operating.</li>
+<li>Phase 1 summary report, including the confirmed design basis and recommendations for Phase 2.</li>
+</ul>
+
+<h2>8. Project phases</h2>
+<table class="t">
+<tr><th style="width:22%">Phase</th><th>Work</th><th style="width:22%">Output</th><th style="width:16%">Timing</th></tr>
+<tr><td class="k">1. Prototype and discovery</td><td>Survey two sites; agree the definition of "10&deg;C cooler"; engineer the doors; fabricate and install two prototypes (one ADTRAN, one Nokia).</td><td>Two working prototypes; drawings; Phase 1 report</td><td>8 to 12 weeks</td></tr>
+<tr><td class="k">2. Field test and refinement</td><td>Monitor temperatures outside, inside and on equipment hot spots through a hot, sunny, full-load period; refine the design.</td><td>Test report; go / no-go</td><td>6 to 8 weeks</td></tr>
+<tr><td class="k">3. Production and rollout</td><td>Fabricate and install doors for the remaining cabinets.</td><td>Installed doors; as-built records</td><td>8 to 12 weeks</td></tr>
+</table>
+<p>Each phase starts only with the client's written approval. Phases 2 and 3 are quoted separately, based on Phase 1 results and the number of cabinets.</p>
+
+<h2>9. Pricing</h2>
+<table class="t">
+<tr><th>Phase</th><th style="width:28%">Price</th></tr>
+<tr><td><b>Phase 1: Prototype and discovery</b>, fixed price, all-in. Includes site surveys, engineering and drawings for both cabinet types, two VoltAire HIX55 heat exchangers, two fabricated cavity doors, installation materials, freight, installation, project management and the Phase 1 report.</td><td><b>$69,000</b></td></tr>
+<tr><td>Phase 2: Field test and refinement</td><td>Quoted after Phase 1</td></tr>
+<tr><td>Phase 3: Production and rollout</td><td>Per cabinet; see indicative pricing below</td></tr>
+</table>
+<h3>Indicative Phase 3 pricing, per cabinet</h3>
+<table class="t">
+<tr><th>Cabinets per order</th><th style="width:30%">Price per cabinet</th></tr>
+<tr><td>1 to 3</td><td>$10,450</td></tr>
+<tr><td>4 to 6</td><td>$10,050</td></tr>
+<tr><td>7 to 24</td><td>$9,650</td></tr>
+<tr><td>25 to 99</td><td>$9,250</td></tr>
+<tr><td>100 or more</td><td>$8,800</td></tr>
+</table>
+<p>Per-cabinet pricing includes one VoltAire HIX55 heat exchanger, one fabricated cavity door, mounting of the heat exchanger in the door, installation at the cabinet, installation materials, freight and project management. For example, the 78 cabinets in the local market would be about $721,500 at the 25 to 99 tier. Indicative pricing is subject to Phase 1 and Phase 2 results, final supplier pricing and site conditions, and is confirmed in a Phase 3 quote. Power system upgrades, where needed, are quoted separately.</p>
+<p><b>Payment terms:</b> 50% ($34,500) due up front on signing, to order equipment; 50% ($34,500) due on completion of Phase 1. Prices exclude applicable sales tax, permits and utility fees unless stated. Equipment pricing is based on current supplier pricing and is held until the validity date on page 1.</p>
+
+<h2>10. Client responsibilities</h2>
+<ul>
+<li>Site access, escorts where required, and any permits or right-of-way approvals.</li>
+<li>Scheduling of maintenance windows and coordination of any service interruption.</li>
+<li>Cabinet drawings, network load data and alarm monitoring access, where available.</li>
+<li>Timely review and approval of drawings and test results.</li>
+</ul>
+
+<h2>11. Assumptions</h2>
+<ul>
+<li>Cabinet data in this proposal comes from the manufacturers' published manuals and is confirmed in Phase 1.</li>
+<li>Heat loads of 1,000 W existing and 500 W planned per cabinet are provided by the client and confirmed in Phase 1.</li>
+<li>Cooling figures are engineering estimates based on published ratings. They are not a guarantee of performance; actual results depend on site conditions, sun exposure and equipment load.</li>
+<li>Existing cabinets are in good, weather-tight condition.</li>
+<li>The client selects the two Phase 1 sites, one ADTRAN and one Nokia cabinet, with safe access and working power.</li>
+</ul>
+
+<h2>12. Exclusions</h2>
+<ul>
+<li>Rectifier, battery or power system upgrades, unless added by change order.</li>
+<li>Repair of existing cabinet damage, corrosion or failed equipment.</li>
+<li>Changes to network electronics or their configuration.</li>
+<li>Concrete, pad or site work.</li>
+<li>Any work not listed in the scope of work.</li>
+</ul>
+
+<h2>13. Changes</h2>
+<p>Changes to scope, schedule or quantities are made by written change order agreed by both parties before the work proceeds.</p>
+
+<h2>14. Warranty</h2>
+<p>Fabricated doors carry a workmanship warranty of one (1) year from installation. HIX heat exchangers carry the manufacturer's warranty, passed through to the client. Warranty excludes damage from accidents, vandalism, misuse or unauthorized modification. The client should confirm that the retrofit does not affect any cabinet or equipment warranty from ADTRAN, Nokia or Vertiv.</p>
+
+<h2>15. Confidentiality</h2>
+<p>This proposal and its pricing are confidential and provided for the client's evaluation only. They may not be shared with third parties without the written consent of Basic American Enterprises LLC.</p>
+
+<h2>16. Validity</h2>
+<p>This proposal is valid until the date shown on page 1. After that date, pricing and schedule are subject to review.</p>
+
+<h2>17. Acceptance</h2>
+<p>To accept this proposal, please sign below and return a copy.</p>
+<table class="t">
+<tr><th style="width:50%">G Fiber</th><th>Basic American Networks</th></tr>
+<tr><td style="height:70pt;">Signature:<br><br>Name:<br>Title:<br>Date:</td><td>Signature:<br><br>Name:<br>Title:<br>Date:</td></tr>
+</table>
+
+<h3>Sources</h3>
+<ul class="note">
+<li>ADTRAN, Total Access 5004 96/192-Port Fiber OSP System in Crossover Enclosure, Installation and Maintenance Guide, 6419254FDCL1-5C, February 2015.</li>
+<li>Nokia, Google Fiber Compact Cabinet Installation, version 1, September 2020.</li>
+<li>VoltAire Systems, HIX Series Heat Exchanger, document BC0117F, February 2020.</li>
+</ul>
+
+</body>
+</html>
