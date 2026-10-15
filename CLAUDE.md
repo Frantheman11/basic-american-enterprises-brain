@@ -25,6 +25,8 @@ step 4 and by "remember this".
 
 | Rule | Applies to | Added |
 |---|---|---|
+| Never quote a price without me. | all companies | 2026-10-10 |
+| Never correspond with anyone without my knowledge and approval. | all companies | 2026-10-10 |
 
 
 ## What you may do

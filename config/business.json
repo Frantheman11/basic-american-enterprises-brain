@@ -81,10 +81,11 @@
     "google_business": ""
   },
   "voice": {
-    "three_words": [],
+    "three_words": ["confident", "visionary", "friendly"],
     "never_say": []
   },
   "sources": {
+    "voice.three_words": "owner, in chat, 2026-10-14 (never_say and per-company voice skipped)",
     "since": "owner, in chat, 2026-10-08",
     "address": "owner, in chat, 2026-10-08",
     "services": "owner, in chat, 2026-10-08 (prices not given)",

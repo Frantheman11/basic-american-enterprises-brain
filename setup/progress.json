@@ -10,10 +10,12 @@
     "setup-welcome": "2026-10-07",
     "setup-computer": "2026-10-07",
     "setup-website": "2026-10-07 (skipped: factory-website already done)",
-    "setup-backup": "2026-10-09 (Google Drive for desktop, franmcgrath11@gmail.com, syncs the folder in place on the Desktop)"
+    "setup-backup": "2026-10-09 (Google Drive for desktop, franmcgrath11@gmail.com, syncs the folder in place on the Desktop)",
+    "setup-questions": "2026-10-14 (round 4 team and tools skipped; voice never-say words and per-company voice skipped)"
   },
   "timing": {
-    "setup-questions": { "started": "2026-10-07T00:00:00" },
+    "setup-questions": { "started": "2026-10-07T00:00:00", "finished": "2026-10-14T00:00:00" },
+    "setup-files": { "started": "2026-10-14T00:00:00" },
     "setup-backup": { "started": "2026-10-08T22:56:52", "finished": "2026-10-08T23:40:00" }
   },
   "notes": [
@@ -29,6 +31,7 @@
     "setup-backup: old Google Drive (v87) was broken; Fran did a clean reinstall 2026-10-08 (now v132) and restarted at 11:10 pm; Drive opened for 8 seconds after the restart, then closed; no G: drive yet",
     "setup-backup: on 2026-10-09 Fran did not remember where the backup stopped after the restart; next time, write the exact next click before asking for a restart",
     "setup-backup: Fran chose the Google Drive of franmcgrath11@gmail.com for the safe copy (2026-10-09); Fran first went to Google's download page instead of opening the installed app",
-    "setup-backup: cause found 2026-10-09: Drive v132 (latest) quit in 5 s because old saved account data in %LOCALAPPDATA%\\Google\\DriveFS carried an 'application deprecated' flag; renamed that folder to DriveFS.old-2026-10-09 (not deleted); Drive then stayed open and showed the sign-in window"
+    "setup-backup: cause found 2026-10-09: Drive v132 (latest) quit in 5 s because old saved account data in %LOCALAPPDATA%\\Google\\DriveFS carried an 'application deprecated' flag; renamed that folder to DriveFS.old-2026-10-09 (not deleted); Drive then stayed open and showed the sign-in window",
+    "setup-questions: round 5 (rules) 2026-10-10: Fran gave 2 rules (no price quotes without him, no correspondence without his knowledge and approval); discount limit, topics to avoid and G Fiber checks left blank"
   ]
 }
