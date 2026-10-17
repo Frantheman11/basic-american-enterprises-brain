@@ -14,13 +14,24 @@ If Python is missing, edit it by hand, one line per page; the next rebuild repla
 - [Offers and prices](wiki/offers.md) (not written yet)
 - [The team](wiki/team.md) (not written yet)
 - [Our tools](wiki/tools.md) (not written yet)
-- [How we sound](wiki/voice.md) (not written yet)
+- [How we sound](wiki/voice.md) - confident, visionary, friendly (all companies)
 
 ## Companies
 
 - [Basic American Enterprises](wiki/companies/basic-american-enterprises.md) (not written yet)
 - [Basic American Intelligence](wiki/companies/basic-american-intelligence.md) (not written yet)
 - [Basic American Networks](wiki/companies/basic-american-networks.md) (not written yet)
+
+## Handoffs
+
+- [Websites: three sites, one brief](handoffs/websites-2026-10.md) - started 2026-10-08; draft only
+
+## Foundation
+
+- [Structure and growth](knowledge/index.md) - maintain and extend the brain
+- [Skill library](library/SKILLS.md) - task routing and reusable templates
+- [Tool inventory](tools/README.md) - checks and diagnostics already provided
+- [Support](support/README.md) - cooperative troubleshooting
 
 ## Also
 
