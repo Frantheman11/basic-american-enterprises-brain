@@ -24,3 +24,4 @@ One line per change, newest last: date · what · from where.
 2026-10-09 · setup-backup done: Google Drive for desktop syncs this folder to franmcgrath11@gmail.com; old broken Drive settings set aside (DriveFS.old-2026-10-09) · Fran, in chat
 2026-10-10 · setup round 5 (rules): 2 rules added to CLAUDE.md · Fran, in chat
 2026-10-14 · setup-questions done: voice words (confident, visionary, friendly) saved to config and wiki/voice.md · Fran, in chat
+2026-10-17 · adopted Second Brain Foundation 1.0.0 as add-only merge (3 skills, knowledge/, library/, support/, tools); kept own settings, steps and skills · Fran, in chat
