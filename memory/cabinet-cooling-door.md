@@ -18,3 +18,6 @@ Facts from the manuals that shape the door:
 - Decision (Fran, 2026-10-08): the new heat exchanger is AC powered. HIX55 AC: 3.5 A at 115 VAC (HIX055M) or 1.9 A at 230 VAC (HIX055N). AC models have no VoltAire fan alarm board (48 VDC only) and use a cord grip, not Molex. HIX25 is DC only, so not an option. Price assumed unchanged at $5,000; confirm with VoltAire.
 
 **Why:** the original design report assumed door-mounted units and wrong ADTRAN dimensions.
+
+Fabricator (Fran, in chat, 2026-10-18): Spencer, Basic American Networks' metal fabricator, joins the
+G Fiber site walk on 2026-10-21 to evaluate the door work. Surname, company and contact: TO CONFIRM.
