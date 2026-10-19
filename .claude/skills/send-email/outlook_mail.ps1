@@ -101,10 +101,16 @@ switch ($Action) {
   'draft' {
     if ($EntryId) {
       $mail = $ns.GetItemFromID($EntryId)
+      # Outlook does not report the account of a reopened draft; pin it to the mailbox the draft is in
+      $storeId = $mail.Parent.Store.StoreID
+      $acct = $null
+      foreach ($a in $ns.Accounts) { if ($a.DeliveryStore.StoreID -eq $storeId) { $acct = $a } }
+      if ($acct) { [void]$mail.GetType().InvokeMember('SendUsingAccount', [Reflection.BindingFlags]::SetProperty, $null, $mail, @($acct)) }
     } else {
       foreach ($p in 'From','To','Subject','BodyFile') { if (-not (Get-Variable $p -ValueOnly)) { throw "draft needs -$p" } }
       $acct = Get-Account $From
-      $mail = $acct.DeliveryStore.GetDefaultFolder(16).Items.Add(0)
+      $drafts = $acct.DeliveryStore.GetDefaultFolder(16)
+      $mail = $drafts.Items.Add(0)
       # A plain assignment of a COM object property is silently ignored in PowerShell 5.1
       [void]$mail.GetType().InvokeMember('SendUsingAccount', [Reflection.BindingFlags]::SetProperty, $null, $mail, @($acct))
     }
@@ -113,7 +119,9 @@ switch ($Action) {
     if ($Subject) { $mail.Subject = $Subject }
     if ($BodyFile) { $mail.Body = [IO.File]::ReadAllText((Resolve-Path $BodyFile), [Text.Encoding]::UTF8) }
     foreach ($f in $Attach) { if ($f) { [void]$mail.Attachments.Add((Resolve-Path $f).Path) } }
-    "From: $($mail.SendUsingAccount.SmtpAddress)"
+    # An unsaved item can report the wrong Parent (seen on the hotmail account), so name the folder we used
+    $where = if ($drafts) { $drafts.FolderPath } else { $mail.Parent.FolderPath }
+    "From: $($acct.SmtpAddress) (draft is in $where)"
     "To: $($mail.To)"
     if ($mail.CC) { "Cc: $($mail.CC)" }
     "Subject: $($mail.Subject)"
@@ -129,7 +137,7 @@ switch ($Action) {
   'send' {
     if (-not $EntryId) { throw 'send needs -EntryId' }
     $mail = $ns.GetItemFromID($EntryId)
-    "Sending from $($mail.SendUsingAccount.SmtpAddress) to $($mail.To): $($mail.Subject)"
+    "Sending from the mailbox $($mail.Parent.FolderPath) to $($mail.To): $($mail.Subject)"
     $mail.Send()
     'Sent.'
   }

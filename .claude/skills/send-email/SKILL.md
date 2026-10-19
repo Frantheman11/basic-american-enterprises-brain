@@ -58,3 +58,4 @@ to draft from the BAE account instead, or wait until Fran adds it to Outlook.
 - `-Action draft ... -Discard` built test emails from both Outlook accounts with the right From and discarded them; nothing saved or sent. First run showed a blank From: fixed by setting SendUsingAccount through InvokeMember.
 - Should trigger: "email Spencer the door questions". Should not trigger: "draft a letter I'll print" (use drafts/ only).
   Incomplete input: "email him" with no clear person → ask who.
+- 2026-10-18: a reopened draft did not report its account (From blank). The helper now pins a reopened draft to the mailbox it sits in, and names the Drafts folder it used. Checked afterwards: no test email in any Outbox, Drafts or Sent folder.

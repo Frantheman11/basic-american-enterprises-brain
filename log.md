@@ -39,3 +39,4 @@ One line per change, newest last: date · what · from where.
 2026-10-18 · fabricator Spencer is with Fab Metal Shop; website details saved to memory/cabinet-cooling-door.md; surname and location to confirm · Fran, in chat; fabmetalshop.com
 2026-10-18 · fabricator's surname confirmed: Spencer Richmond (Fab Metal Shop) · Fran, in chat
 2026-10-18 · built send-email skill (.claude/skills/send-email/: SKILL.md, outlook_mail.ps1); tested accounts, contact lookup and discarded drafts, nothing sent; catalog rows in library/SKILLS.md and CLAUDE.md; memory/email-via-outlook.md; Spencer's email found in sent mail; the 2026-10-18 email to Sam not found in Outlook, to confirm · Fran, in chat
+2026-10-18 · send-email helper fix: reopened drafts keep the right From account; email to Sam redrafted in BAE Outlook Drafts (drafts/email/2026-10-18-sam-website-files.txt) and opened for Fran; not sent · Fran, in chat
