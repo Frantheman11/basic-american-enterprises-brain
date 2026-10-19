@@ -30,3 +30,4 @@ One line per change, newest last: date · what · from where.
 2026-10-18 · drafted note asking Sam Briones to share the BAE website draft files (drafts/message-to-sam-website-files.md); not sent · Fran, in chat
 2026-10-18 · saved Sam Briones's email (sam@customtailoredagents.com) to config, Custom Tailored Agents entry · Fran, in chat
 2026-10-18 · Fran emailed Sam the website-files request from Outlook (prefilled by Claude, sent by Fran); no reply yet · Fran, in chat
+2026-10-18 · drafted basicamericanenterprises.com change list with new text (drafts/websites/basicamericanenterprises-com-changes.md); not published · Fran, in chat
