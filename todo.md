@@ -10,6 +10,6 @@ One line per open item: `- [ ] what · for whom · by when`. Done items get `[x]
 - [ ] Find who has the WordPress login; change the password and delete the 29 spam posts · Basic American Enterprises · before the rebuild
 
 - [ ] Website changes: revise basicamericanenterprises.com, build Basic American Intelligence, revise basicamericannetworks.com (handoffs/websites-2026-10.md) · Fran · [date TO CONFIRM]
-- [ ] Get Sam's draft of the Basic American Enterprises website (link or files); it is not on this computer (checked 2026-10-18); request emailed by Fran to sam@customtailoredagents.com 2026-10-18 (drafts/message-to-sam-website-files.md); waiting on reply · Fran / Sam Briones · [date TO CONFIRM]
+- [ ] Get Sam's draft of the Basic American Enterprises website (link or files); it is not on this computer (checked 2026-10-18); request opened in Outlook 2026-10-18 (drafts/message-to-sam-website-files.md); NOT found in Outlook Sent, Drafts or Outbox on 2026-10-18 evening: confirm it was sent · Fran / Sam Briones · [date TO CONFIRM]
 - [ ] Send Sam the website wireframe Fran has in mind (call notes 2026-10-01) · Fran · [date TO CONFIRM]
 - [ ] Confirm whether Block Battery and BlackMP are still in the portfolio, and how each venture relates to Basic American Enterprises (owned, incubated, invested) · Fran · [date TO CONFIRM]

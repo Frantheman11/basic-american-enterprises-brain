@@ -69,6 +69,7 @@ a page in `wiki/companies/`. Always say which company a page, draft or fact belo
 | "turn this into a skill" | `build-skill` | saves a job that worked as a reusable skill |
 | "add a capability", "where should this go" | `grow-system` | picks the right home for something new, without duplicates |
 | "help another Claude troubleshoot" | `support-session` | prepares a support request; advice only, Fran approves each fix |
+| "email <person>", "send <person> a note" | `send-email` | looks up the contact, drafts in Outlook from the right account, sends only when Fran says "send" |
 
 ## How the brain gets better
 
@@ -88,6 +89,7 @@ something new is built.
 | check the brain is healthy | `python tools/brain_check.py` (GitHub also runs it on every save) |
 | foundation check (library, skills, links) | `python tools/foundation_check.py` (see `tools/README.md` for known gaps) |
 | support diagnostics, no business contents | `python tools/support_snapshot.py` |
+| look up a contact, draft or send email via Outlook | `.claude/skills/send-email/outlook_mail.ps1` (used by send-email) |
 
 ## Working style
 

@@ -38,3 +38,4 @@ One line per change, newest last: date · what · from where.
 2026-10-18 · drafted talking points for Spencer at the G Fiber site walk (drafts/spencer-site-walk-2026-10-21.md); internal · Fran, in chat
 2026-10-18 · fabricator Spencer is with Fab Metal Shop; website details saved to memory/cabinet-cooling-door.md; surname and location to confirm · Fran, in chat; fabmetalshop.com
 2026-10-18 · fabricator's surname confirmed: Spencer Richmond (Fab Metal Shop) · Fran, in chat
+2026-10-18 · built send-email skill (.claude/skills/send-email/: SKILL.md, outlook_mail.ps1); tested accounts, contact lookup and discarded drafts, nothing sent; catalog rows in library/SKILLS.md and CLAUDE.md; memory/email-via-outlook.md; Spencer's email found in sent mail; the 2026-10-18 email to Sam not found in Outlook, to confirm · Fran, in chat

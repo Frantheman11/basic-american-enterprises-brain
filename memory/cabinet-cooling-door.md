@@ -24,4 +24,4 @@ Fabricator (Fran, in chat, 2026-10-18): Spencer Richmond, of Fab Metal Shop, joi
 Location: Fran says Signal Hill. The website fabmetalshop.com (read 2026-10-18) lists 2231 E Curry
 Street, Long Beach, CA 90805, (562) 423-1836, orders@fabmetalshop.com; CNC machining, waterjet
 cutting, brake forming, tube bending, TIG/MIG/spot welding, SolidWorks drafting. Same shop as
-Spencer's: TO CONFIRM (the site does not name Spencer or Signal Hill).
+Spencer's: yes, Fran emailed spencer.richmond@fabmetalshop.com on 2026-09-23 from the BAE account (Outlook sent mail, found 2026-10-18). Shop address: Signal Hill (Fran) vs Long Beach (website): TO CONFIRM.
