@@ -42,4 +42,4 @@ exchanger (AC powered). Phase 1 = 2 prototype doors: 1 ADTRAN, 1 Nokia.
 ## Keep in mind
 - Pricing talk stays between you and Spencer, not in front of G Fiber.
 - Door installation goes through a licensed partner until your C-7 is in hand.
-- Spencer's surname, company and contact details: get them for the brain.
+- Spencer's direct phone and email: get them for the brain. Ask whether the shop is in Signal Hill or at the Long Beach address on fabmetalshop.com.

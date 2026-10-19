@@ -4,7 +4,7 @@ One line per open item: `- [ ] what · for whom · by when`. Done items get `[x]
 
 - [ ] Site walk with the City of Santa Monica to identify a fiber build; Fran attends as liaison (on whose behalf: TO CONFIRM) · Fran · 2026-10-19 (Monday)
 - [ ] Michael's Student of the Month award ceremony (whole school; nominated through his film class), Los Alamitos High School, 12:00 noon · Fran (family) · 2026-10-20 (Tuesday)
-- [ ] G Fiber site walk; bring Spencer (metal fabricator) to evaluate the cabinet door work for proposal 4344 (drafts/Proposal 4344.pdf); talking points in drafts/spencer-site-walk-2026-10-21.md · Basic American Networks · 2026-10-21 (Wednesday)
+- [ ] G Fiber site walk; bring Spencer Richmond (Fab Metal Shop) to evaluate the cabinet door work for proposal 4344 (drafts/Proposal 4344.pdf); talking points in drafts/spencer-site-walk-2026-10-21.md · Basic American Networks · 2026-10-21 (Wednesday)
 - [ ] Discuss proposal phases, then fill client, pricing, timing, warranty and terms · Fran · 2026-10-08
 - [ ] Apply to CSLB for the C-7 exam ($450 application fee) · Fran · [date TO CONFIRM]
 - [ ] Find who has the WordPress login; change the password and delete the 29 spam posts · Basic American Enterprises · before the rebuild

@@ -19,8 +19,8 @@ Facts from the manuals that shape the door:
 
 **Why:** the original design report assumed door-mounted units and wrong ADTRAN dimensions.
 
-Fabricator (Fran, in chat, 2026-10-18): Spencer, of Fab Metal Shop, joins the G Fiber site walk on
-2026-10-21 to evaluate the door work. Surname: Fran said both "Richman" and "Richmond"; TO CONFIRM.
+Fabricator (Fran, in chat, 2026-10-18): Spencer Richmond, of Fab Metal Shop, joins the G Fiber site walk on
+2026-10-21 to evaluate the door work. Surname Richmond (confirmed by Fran 2026-10-18).
 Location: Fran says Signal Hill. The website fabmetalshop.com (read 2026-10-18) lists 2231 E Curry
 Street, Long Beach, CA 90805, (562) 423-1836, orders@fabmetalshop.com; CNC machining, waterjet
 cutting, brake forming, tube bending, TIG/MIG/spot welding, SolidWorks drafting. Same shop as
