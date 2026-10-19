@@ -21,6 +21,10 @@ If Python is missing, edit it by hand, one line per page; the next rebuild repla
 - [Basic American Enterprises](wiki/companies/basic-american-enterprises.md) (not written yet)
 - [Basic American Intelligence](wiki/companies/basic-american-intelligence.md) (not written yet)
 - [Basic American Networks](wiki/companies/basic-american-networks.md) (not written yet)
+- [iPost Sports](wiki/companies/ipost-sports.md) (not written yet)
+- [IoT Data Group LLC](wiki/companies/iot-data-group.md) (not written yet)
+- [Clear Insights AI Inc.](wiki/companies/clear-insights-ai.md) (not written yet)
+- [Custom Tailored Agents LLC](wiki/companies/custom-tailored-agents.md) (not written yet)
 
 ## Handoffs
 

@@ -8,4 +8,5 @@ Open to-dos do not go here.
 - [Fran's background](fran-background.md) — 11 years CEO of Color Broadband (wireless ISP); now systems integration; plans C-7 exam (2026-10-07)
 - [Foundation 1.0.0](foundation-1-0-0.md) — merged in as add-only; kept our settings, setup steps and 5 skills (2026-10-17)
 - [Website rebuild](website-rebuild.md) — Fran rebuilds the site himself; Sam does not run the current WordPress (2026-10-07)
+- [One brain](one-brain-2026-10-18.md) — this folder is the one brain; other brain folders merged in, originals untouched (2026-10-18)
 

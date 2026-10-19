@@ -9,7 +9,7 @@
   },
   "name": "Basic American Enterprises",
   "owner": "Fran",
-  "what_we_do": "An incubator that develops start-ups and gives them the core services of an accelerator or incubator, plus distribution: the territories (50 key people, 3 regions) are the distribution, with lead generation and a national rep network for every portfolio company. Basic American Intelligence adds core technology (AI) accelerator features inside each start-up. The strategy now being formulated has two aims: raise capital for a planned fund ('smart money'), and establish territory reps and distributors for the products and services of the incubator's companies. 'Smart money invests in smart American businesses.'",
+  "what_we_do": "Intended to be an incubator, a holding company, an investment fund and a master agent for several business ventures (owner, 2026-10-18). An incubator that develops start-ups and gives them the core services of an accelerator or incubator, plus distribution: the territories (50 key people, 3 regions) are the distribution, with lead generation and a national rep network for every portfolio company. Basic American Intelligence adds core technology (AI) accelerator features inside each start-up. The strategy now being formulated has two aims: raise capital for a planned fund ('smart money'), and establish territory reps and distributors for the products and services of the incubator's companies. 'Smart money invests in smart American businesses.'",
   "companies": [
     {
       "name": "Basic American Enterprises",
@@ -29,6 +29,30 @@
       "website": "https://basicamericannetworks.com",
       "phone": "310.488.7205",
       "page": "wiki/companies/basic-american-networks.md"
+    },
+    {
+      "name": "iPost Sports",
+      "role": "venture (portfolio company) of Basic American Enterprises",
+      "website": "",
+      "page": "wiki/companies/ipost-sports.md"
+    },
+    {
+      "name": "IoT Data Group LLC",
+      "role": "venture (portfolio company) of Basic American Enterprises; also listed as a Basic American Networks partner",
+      "website": "",
+      "page": "wiki/companies/iot-data-group.md"
+    },
+    {
+      "name": "Clear Insights AI Inc.",
+      "role": "venture (portfolio company) of Basic American Enterprises",
+      "website": "",
+      "page": "wiki/companies/clear-insights-ai.md"
+    },
+    {
+      "name": "Custom Tailored Agents LLC",
+      "role": "venture (portfolio company) of Basic American Enterprises; builds second brains, CRMs, websites and automations; provides the CRM every portfolio company runs on; main contact Sam Briones",
+      "website": "",
+      "page": "wiki/companies/custom-tailored-agents.md"
     }
   ],
   "phone": "562-573-3200",
@@ -85,6 +109,9 @@
     "never_say": []
   },
   "sources": {
+    "what_we_do (first sentence)": "owner, in chat, 2026-10-18 (session in Documents\\second-brain-foundation)",
+    "companies (iPost Sports, IoT Data Group LLC, Clear Insights AI Inc., Custom Tailored Agents LLC)": "owner, in chat, 2026-10-18, listed with Basic American Networks and Basic American Intelligence as ventures, 'with the intent of adding others'; same four are in the portfolio in raw/inbox/call-notes-2026-10-01.md. Owner typed 'Iot'; 'IoT' follows the call notes and partner list. Legal relationship to Basic American Enterprises (owned, incubated, invested) not yet stated. Block Battery and BlackMP were in the 2026-10-01 portfolio but not in the 2026-10-18 list: TO CONFIRM.",
+    "companies.Custom Tailored Agents LLC.role": "raw/earlier-brains/fran-second-brain-2026-10-07/portfolio/custom-tailored-agents.md and memory/people.md (written by Sam's team from the 2026-10-01 call)",
     "voice.three_words": "owner, in chat, 2026-10-14 (never_say and per-company voice skipped)",
     "since": "owner, in chat, 2026-10-08",
     "address": "owner, in chat, 2026-10-08",
