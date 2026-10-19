@@ -40,3 +40,4 @@ One line per change, newest last: date · what · from where.
 2026-10-18 · fabricator's surname confirmed: Spencer Richmond (Fab Metal Shop) · Fran, in chat
 2026-10-18 · built send-email skill (.claude/skills/send-email/: SKILL.md, outlook_mail.ps1); tested accounts, contact lookup and discarded drafts, nothing sent; catalog rows in library/SKILLS.md and CLAUDE.md; memory/email-via-outlook.md; Spencer's email found in sent mail; the 2026-10-18 email to Sam not found in Outlook, to confirm · Fran, in chat
 2026-10-18 · send-email helper fix: reopened drafts keep the right From account; email to Sam redrafted in BAE Outlook Drafts (drafts/email/2026-10-18-sam-website-files.txt) and opened for Fran; not sent · Fran, in chat
+2026-10-18 · emailed Sam Briones re BAE website files from fran@basicamericanenterprises.com; Fran sent it from Outlook; confirmed in Sent Items 23:48. Corrects the earlier entry that said it was sent from the mailto draft · Fran, in chat
