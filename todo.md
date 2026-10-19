@@ -2,6 +2,7 @@
 
 One line per open item: `- [ ] what · for whom · by when`. Done items get `[x]` and move to log.md.
 
+- [ ] Site walk with the City of Santa Monica to identify a fiber build · Basic American Networks [TO CONFIRM company] · 2026-10-19 (Monday)
 - [ ] Discuss proposal phases, then fill client, pricing, timing, warranty and terms · Fran · 2026-10-08
 - [ ] Apply to CSLB for the C-7 exam ($450 application fee) · Fran · [date TO CONFIRM]
 - [ ] Find who has the WordPress login; change the password and delete the 29 spam posts · Basic American Enterprises · before the rebuild
