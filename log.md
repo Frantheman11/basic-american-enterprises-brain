@@ -28,3 +28,4 @@ One line per change, newest last: date · what · from where.
 2026-10-17 · index.md updated by hand: voice page written, websites handoff and foundation section added · Fran, in chat
 2026-10-18 · merged earlier brains into this one: Fran-Second-Brain retained in raw/earlier-brains/; added ventures iPost Sports, IoT Data Group LLC, Clear Insights AI Inc., Custom Tailored Agents LLC (config, 4 company pages, index); 'holding company' added to what_we_do; 3 to-dos; memory/one-brain-2026-10-18.md. Old folders untouched · Fran, in chat
 2026-10-18 · drafted note asking Sam Briones to share the BAE website draft files (drafts/message-to-sam-website-files.md); not sent · Fran, in chat
+2026-10-18 · saved Sam Briones's email (sam@customtailoredagents.com) to config, Custom Tailored Agents entry · Fran, in chat
