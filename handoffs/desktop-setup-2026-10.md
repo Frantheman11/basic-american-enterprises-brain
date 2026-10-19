@@ -8,7 +8,7 @@ email); the laptop can sleep and is used on the go. No migration: the same folde
 - Suggested (not yet decided): the desktop becomes the always-on machine; a private GitHub repository
   (account ipost-sports) keeps laptop and desktop in step; Google Drive stays the backup.
 
-## Steps (walk Fran through these one at a time when he is at the desktop)
+## Steps (walk Fran through these one at a time, at the desktop)
 1. Google Drive for desktop, signed in as franmcgrath11@gmail.com; confirm the
    basic-american-enterprises-brain folder appears and opens.
 2. Outlook with fran@basicamericanenterprises.com (Microsoft 365 via GoDaddy) and any other accounts
