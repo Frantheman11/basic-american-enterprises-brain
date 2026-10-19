@@ -8,9 +8,17 @@
                                            save (or update) a draft in that account's Drafts folder; prints its EntryId
                                            -Discard builds it without saving (test mode)
   -Action send   -EntryId <id>             send one saved draft
+  -Action inbox  -Sender <addr> [-Since yyyy-MM-dd]
+                                           list messages from one sender in every Inbox (read-only)
+  -Action save   -EntryId <id> -OutDir <dir>
+                                           copy one received message (as .txt) and its attachments into a new folder;
+                                           never overwrites; marks nothing read
 #>
 param(
-  [Parameter(Mandatory)][ValidateSet('accounts','find','draft','send')][string]$Action,
+  [Parameter(Mandatory)][ValidateSet('accounts','find','draft','send','inbox','save')][string]$Action,
+  [string]$Sender,
+  [string]$Since,
+  [string]$OutDir,
   [string]$Query,
   [string]$From,
   [string]$To,
@@ -132,6 +140,47 @@ switch ($Action) {
       "Saved to Drafts. EntryId: $($mail.EntryID)"
       if ($Show) { $mail.Display() }
     }
+  }
+
+  'inbox' {
+    if (-not $Sender) { throw 'inbox needs -Sender' }
+    $after = if ($Since) { [datetime]::ParseExact($Since, 'yyyy-MM-dd', $null) } else { (Get-Date).AddDays(-30) }
+    $found = 0
+    foreach ($store in $ns.Stores) {
+      try { $items = $store.GetDefaultFolder(6).Items } catch { continue }
+      $items = $items.Restrict("[ReceivedTime] >= '" + $after.ToString('MM/dd/yyyy HH:mm') + "'")
+      foreach ($m in $items) {
+        if ($m.Class -ne 43) { continue }
+        $addr = $m.SenderEmailAddress
+        if ($m.SenderEmailType -eq 'EX') { try { $addr = $m.Sender.GetExchangeUser().PrimarySmtpAddress } catch {} }
+        if ($addr -ieq $Sender) {
+          $found++
+          "$($m.ReceivedTime.ToString('yyyy-MM-dd HH:mm')) | $($store.DisplayName) | $($m.Subject) | attachments: $($m.Attachments.Count) | EntryId: $($m.EntryID)"
+        }
+      }
+    }
+    if (-not $found) { "No messages from $Sender since $($after.ToString('yyyy-MM-dd'))." }
+  }
+
+  'save' {
+    if (-not $EntryId -or -not $OutDir) { throw 'save needs -EntryId and -OutDir' }
+    if (Test-Path $OutDir) { throw "Folder already exists, not overwriting: $OutDir" }
+    $m = $ns.GetItemFromID($EntryId)
+    $wasUnread = $m.UnRead
+    [void](New-Item -ItemType Directory -Path $OutDir)
+    $fromAddr = $m.SenderEmailAddress
+    if ($m.SenderEmailType -eq 'EX') { try { $fromAddr = $m.Sender.GetExchangeUser().PrimarySmtpAddress } catch {} }
+    $head = "From: $($m.SenderName) <$fromAddr>`r`nTo: $($m.To)`r`nReceived: $($m.ReceivedTime.ToString('yyyy-MM-dd HH:mm'))`r`nSubject: $($m.Subject)`r`n`r`n"
+    [IO.File]::WriteAllText((Join-Path $OutDir 'message.txt'), $head + $m.Body, [Text.Encoding]::UTF8)
+    "Saved message.txt"
+    foreach ($a in $m.Attachments) {
+      $name = ($a.FileName -replace '[\\/:*?"<>|]', '_')
+      $path = Join-Path $OutDir $name
+      if (Test-Path $path) { "Skipped duplicate name: $name"; continue }
+      $a.SaveAsFile($path)
+      "Saved attachment: $name ($([math]::Round((Get-Item $path).Length/1KB)) KB)"
+    }
+    if ($wasUnread -and -not $m.UnRead) { $m.UnRead = $true; $m.Save() }
   }
 
   'send' {

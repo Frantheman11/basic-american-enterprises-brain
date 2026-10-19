@@ -43,6 +43,14 @@ to draft from the BAE account instead, or wait until Fran adds it to Outlook.
    and add "Sent <date>" at the top of the body file. Save a new contact's address in the
    company's entry in `config/business.json` (or the relevant memory note) with its source.
 
+## Reading a reply (only with Fran's permission for that sender)
+
+`-Action inbox -Sender <addr> -Since <yyyy-mm-dd>` lists that sender's messages (read-only).
+`-Action save -EntryId <id> -OutDir raw/inbox/<date>-<topic>` copies one message and its attachments
+into a new folder (never overwrites, leaves the message unread). Used by the scheduled task
+`file-sam-website-reply` under `memory/permission-file-sam-reply.md`. Tested 2026-10-18 on Fran's
+own sent email to Sam (saved to a scratch folder, then removed).
+
 ## Exceptions
 
 - Fran says "just put it in Outlook": run step 4 with `-Show` and stop; Fran sends from Outlook.

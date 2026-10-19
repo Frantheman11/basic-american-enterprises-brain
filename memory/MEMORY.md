@@ -10,4 +10,5 @@ Open to-dos do not go here.
 - [Website rebuild](website-rebuild.md) — Fran rebuilds the site himself; Sam does not run the current WordPress (2026-10-07)
 - [One brain](one-brain-2026-10-18.md) — this folder is the one brain; other brain folders merged in, originals untouched (2026-10-18)
 - [Email via Outlook](email-via-outlook.md) — send-email skill drafts in Outlook, sends only on Fran's "send"; which accounts are in Outlook (2026-10-18)
+- [Permission: file Sam's reply](permission-file-sam-reply.md) — Fran's advance OK to find and file Sam's website-files reply; weekday 8 am scheduled check; never replies (2026-10-18)
 
