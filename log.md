@@ -33,3 +33,4 @@ One line per change, newest last: date · what · from where.
 2026-10-18 · drafted basicamericanenterprises.com change list with new text (drafts/websites/basicamericanenterprises-com-changes.md); not published · Fran, in chat
 2026-10-18 · paused basicamericanenterprises.com changes until Sam's files arrive (Fran and Sam already covered much of the site) · Fran, in chat
 2026-10-18 · added Fran's family (sons Joseph and Michael McGrath) to memory/fran-background.md; added Santa Monica fiber site walk (2026-10-19) to todo.md · Fran, in chat
+2026-10-18 · Santa Monica site walk: Fran is a liaison, not the bidder · Fran, in chat
