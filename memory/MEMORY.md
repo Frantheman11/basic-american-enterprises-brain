@@ -11,4 +11,5 @@ Open to-dos do not go here.
 - [One brain](one-brain-2026-10-18.md) — this folder is the one brain; other brain folders merged in, originals untouched (2026-10-18)
 - [Email via Outlook](email-via-outlook.md) — send-email skill drafts in Outlook, sends only on Fran's "send"; which accounts are in Outlook (2026-10-18)
 - [Permission: file Sam's reply](permission-file-sam-reply.md) — Fran's advance OK to find and file Sam's website-files reply; weekday 8 am scheduled check; never replies (2026-10-18)
+- [BAE website project](bae-website-project.md) — new site lives in Desktop/2nd Brain/BAE-website; read its PROJECT-CONTEXT.md; Sam's facts that differ from config (2026-10-19)
 

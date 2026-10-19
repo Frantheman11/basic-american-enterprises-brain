@@ -8,7 +8,7 @@ Facts come from `config/business.json`. Every change list and page text goes in 
 ### 1. basicamericanenterprises.com: revise (company: Basic American Enterprises)
 Live site today: `raw/website/basicamericanenterprises-com/home.md` (pulled 2026-10-07).
 Change list drafted 2026-10-18: `drafts/websites/basicamericanenterprises-com-changes.md` (waiting for Fran to tick what to keep).
-**Paused 2026-10-18 (Fran):** Fran and Sam already covered much of the site; wait for Sam's files, then compare them with this change list before asking Fran any more questions.
+**2026-10-19:** Sam's round three arrived; the site is now its own project in Desktop/2nd Brain/BAE-website (see memory/bae-website-project.md). Claude made round four for review (ROUND-FOUR.md there). The change list above is superseded.
 Likely changes, from Fran's answers on 2026-10-08 (not yet confirmed one by one):
 - Lead with the incubator with distribution built in, not "Invest in american business" (the fund is not open yet).
 - Territories (50 key people, 3 regions) explained as distribution for portfolio companies.
