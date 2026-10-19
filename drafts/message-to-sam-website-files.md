@@ -1,0 +1,25 @@
+# Draft: note to Sam Briones asking for the website files
+
+Company: Basic American Enterprises · Drafted 2026-10-18 · NOT SENT. Fran sends it.
+
+---
+
+Subject: BAE website draft: can you share the files?
+
+Hi Sam,
+
+I'm pulling everything for Basic American Enterprises into one place, and I'd like to bring in the
+website draft you built so we can keep working from it.
+
+Would you be OK sharing the files with me? Whatever is easiest for you works:
+- a shared Google Drive folder, or
+- a zip file, or
+- access to the project (repository or site builder) if that's where it lives.
+
+If any part of it belongs to Custom Tailored Agents and shouldn't be shared, just let me know which
+parts and I'll leave those out.
+
+I still owe you my wireframe too. I'll send it over so we're working from the same picture.
+
+Thanks,
+Fran
