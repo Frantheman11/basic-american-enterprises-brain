@@ -33,3 +33,4 @@ Phone: the website and config both use 562-573-3200 for BAE. A switch to 310-488
 **Why:** the website is now its own project; future sessions need to find it and know which facts are disputed.
 
 Sam on hold (Fran, in chat, 2026-10-20): "I don't want to collaborate with Sam on this until I am ready to invite those changes." Do not email Sam, share the site files or ask for the CRM hookup until Fran says so. The status email drafted 2026-10-20 (drafts/email/2026-10-20-sam-website-status-crm.txt) was not sent.
+Email hold (Fran, in chat, 2026-10-20): "shut off the email collaboration correspondence with Sam" until further notice. The send-email skill blocks email to Sam; the scheduled check file-sam-website-reply is disabled. The unsent status draft stays in Outlook Drafts.
