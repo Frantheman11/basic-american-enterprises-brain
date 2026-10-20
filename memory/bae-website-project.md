@@ -28,6 +28,6 @@ before changing config/business.json:
 Sam replied to Gmail, not the BAE address, so the Outlook-only scheduled check
 (file-sam-website-reply) did not see it; the reply was filed by hand with Fran's OK.
 The website folder is not inside the Google-Drive-synced brain folder: backup TO CONFIRM.
-Phone: the website shows 310-488-7205 (Fran, 2026-10-19); config keeps 562-573-3200 as the BAE number. Fran chose "only change it on the website". Do not sync them.
+Phone: the website and config both use 562-573-3200 for BAE. A switch to 310-488-7205 (the BAN number) was tried on the site and reversed by Fran on 2026-10-19.
 
 **Why:** the website is now its own project; future sessions need to find it and know which facts are disputed.
