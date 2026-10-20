@@ -50,7 +50,7 @@
     },
     {
       "name": "Custom Tailored Agents LLC",
-      "role": "venture (portfolio company) of Basic American Enterprises; builds second brains, CRMs, websites and automations; provides the CRM every portfolio company runs on; main contact Sam Briones",
+      "role": "venture (portfolio company) of Basic American Enterprises; customizes its platform to fit small and mid-size businesses up to entire portfolios of businesses, with a uniform, dashboard-driven agentic CRM and more; provides the CRM every portfolio company runs on; main contact Sam Briones",
       "contact_email": "sam@customtailoredagents.com",
       "website": "",
       "page": "wiki/companies/custom-tailored-agents.md"
@@ -113,6 +113,7 @@
     "what_we_do (first sentence)": "owner, in chat, 2026-10-18 (session in Documents\\second-brain-foundation)",
     "companies (iPost Sports, IoT Data Group LLC, Clear Insights AI Inc., Custom Tailored Agents LLC)": "owner, in chat, 2026-10-18, listed with Basic American Networks and Basic American Intelligence as ventures, 'with the intent of adding others'; same four are in the portfolio in raw/inbox/call-notes-2026-10-01.md. Owner typed 'Iot'; 'IoT' follows the call notes and partner list. Legal relationship to Basic American Enterprises (owned, incubated, invested) not yet stated. Block Battery and BlackMP were in the 2026-10-01 portfolio but not in the 2026-10-18 list: TO CONFIRM.",
     "companies.Custom Tailored Agents LLC.contact_email": "Fran, in chat, 2026-10-18 (Sam Briones)",
+    "companies.Custom Tailored Agents LLC.role (platform description)": "Fran, in chat, 2026-10-20",
     "companies.Custom Tailored Agents LLC.role": "raw/earlier-brains/fran-second-brain-2026-10-07/portfolio/custom-tailored-agents.md and memory/people.md (written by Sam's team from the 2026-10-01 call)",
     "voice.three_words": "owner, in chat, 2026-10-14 (never_say and per-company voice skipped)",
     "since": "owner, in chat, 2026-10-08",
