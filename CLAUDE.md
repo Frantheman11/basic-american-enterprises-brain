@@ -94,7 +94,10 @@ something new is built.
 ## Working style
 
 - One session per task. A bigger task gets a brief in `handoffs/` that the next session can open.
-- Save at the end of every session. A cloud-drive copy (OneDrive, Google Drive, Dropbox) saves by
-  itself. A GitHub copy: use git if it works; otherwise ask the owner to click Commit to main, then
-  Push origin, in GitHub Desktop.
+- Save at the end of every session. Google Drive saves by itself. GitHub (private, account
+  Frantheman11) holds two repos: this brain (`main`) and `projects/BAE-website` (`master`, its own
+  git). At the end of a session, with Fran's yes: commit and push each repo that changed.
+- One computer at a time. Both repos sync between laptop and desktop through Drive, `.git` included,
+  so never clone a second copy. Wait until Drive has finished syncing before running git, and never
+  run git on both computers at once: that can corrupt `.git`.
 - Write in plain words, in short lines. Lead with the answer.
