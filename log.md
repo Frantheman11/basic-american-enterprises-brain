@@ -48,3 +48,12 @@ One line per change, newest last: date · what · from where.
 2026-10-20 · Fran: no collaboration with Sam on the website until Fran is ready; status email to Sam not sent · Fran, in chat
 2026-10-20 · email correspondence with Sam shut off until further notice: scheduled check file-sam-website-reply disabled; send-email skill blocks Sam · Fran, in chat
 2026-10-20 · Custom Tailored Agents description updated from Fran (platform for small and mid-size businesses up to whole portfolios; uniform dashboard-driven agentic CRM) in config and on the website draft · Fran, in chat
+2026-10-23 · Basic American Networks DBA: LA County FBN 2022066046 filed 2022-03-25, expires 2027-03-25; recorded in config and renewal added to todo.md · Fran, in chat
+2026-10-28 · Drive backup found missing (folder listed in Drive settings, nothing online); brain copied to G:\My Drive\basic-american-enterprises-brain for the desktop computer; Desktop and My Drive copies do not sync with each other · Fran, in chat
+2026-10-28 · Brain now lives only in G:\My Drive\basic-american-enterprises-brain (synced by Google Drive to laptop and desktop); Desktop copy retired with a STOP notice; Desktop shortcut "Basic American Brain (Google Drive)" added · Fran, in chat
+2026-10-28 · Desktop computer (DESKTOP-M39Q2T0) linked: Claude set to open new sessions in the Google Drive brain (user CLAUDE.md); Desktop shortcut "Basic American Brain (Google Drive)" added · Fran, in chat
+2026-10-28 · Setup resumed at setup-files; inbox opened; paused by Fran before files were dropped; nothing filed · Fran, in chat
+2026-10-28 · Desktop computer: Remote Control switched on for new Claude sessions, so they can be continued from the laptop; the laptop needs the same switch · Fran, in chat
+2026-10-28 · BAE website working copy copied into projects/BAE-website in the Drive brain (own git history, ignored by the brain's git); Desktop\2nd Brain\BAE-website retired with a STOP notice · Fran, in chat
+2026-10-31 · Laptop (5X5TELE01) linked: user CLAUDE.md now points Claude to the Google Drive brain, like the desktop; Remote Control switched on for new sessions · Fran, in chat
+2026-10-31 · GitHub: Fran's account is Frantheman11 (franmcgrath11@gmail.com; the profile menu shows Frantheman11). Private repos Frantheman11/basic-american-enterprises-brain and Frantheman11/BAE-website created by Fran. ipost-sports (2026-10-18 entry) is a separate account · Fran, in chat

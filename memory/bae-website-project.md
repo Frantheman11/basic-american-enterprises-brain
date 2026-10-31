@@ -6,7 +6,7 @@ company: Basic American Enterprises
 ---
 
 The new basicamericanenterprises.com is a separate project folder:
-`C:\Users\Fran McGrath\Desktop\2nd Brain\BAE-website` (its own git history). Read its
+`projects\BAE-website` inside this brain (its own git history; moved from Desktop\2nd Brain\BAE-website on 2026-10-28, old copy retired). Read its
 `PROJECT-CONTEXT.md` first, then `CLAUDE.md` (Sam's design rules) and `ROUND-FOUR.md`.
 Sam (Custom Tailored Agents) built rounds 1-3 (calls 2026-10-01, 10-13, 10-14); Claude made round
 four on 2026-10-19 while Fran was out, for review. Preview without Python: `serve.ps1` in that folder.

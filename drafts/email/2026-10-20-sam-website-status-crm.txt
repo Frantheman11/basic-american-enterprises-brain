@@ -1,0 +1,17 @@
+Hi Sam,
+
+Thanks for the round three files. I've been building on them with Claude, and the site is taking shape. A quick status, and one ask.
+
+Where it stands (still a local draft, nothing published):
+- Three parts now, each with its own opener: Distribution (stars and stripes), Companies (office look) and Capital (Big Sur and Malibu coast, with a more regal type style).
+- Capital is centered on qualifying investors as smart money: a "Qualifying smart money" diligence section, plus my capital section as a graphic of three core ingredients: Foundership, Capital and Management.
+- Reps are now master agents, professional agents and social network agents.
+- Two sign-up sections built in: one for reps and one for companies seeking participation. They look and work like the real thing but don't send anything yet.
+- Smaller fixes: phone layout, much lighter images, link previews for sharing, bios for Louis and Tom, and Basic American Networks added to the products reps carry.
+
+The ask: I'm ready to connect the CRM. Can you hook the two sign-up forms up to the CRM, so each sign-up lands there (reps tagged to their state) and then goes to my calendar? Let me know what you need from me and how you'd like to get the latest files.
+
+Still on my side: the rep tagline, my distribution piece, the logo pick and attorney review of the investor wording before we go live.
+
+Thanks,
+Fran

@@ -14,3 +14,6 @@ Thumbs.db
 # Google Drive sync working folders
 .tmp.drivedownload/
 .tmp.driveupload/
+
+# Projects with their own git history (not part of the brain's git)
+projects/BAE-website/

@@ -32,6 +32,8 @@
     "setup-backup: on 2026-10-09 Fran did not remember where the backup stopped after the restart; next time, write the exact next click before asking for a restart",
     "setup-backup: Fran chose the Google Drive of franmcgrath11@gmail.com for the safe copy (2026-10-09); Fran first went to Google's download page instead of opening the installed app",
     "setup-backup: cause found 2026-10-09: Drive v132 (latest) quit in 5 s because old saved account data in %LOCALAPPDATA%\\Google\\DriveFS carried an 'application deprecated' flag; renamed that folder to DriveFS.old-2026-10-09 (not deleted); Drive then stayed open and showed the sign-in window",
-    "setup-questions: round 5 (rules) 2026-10-10: Fran gave 2 rules (no price quotes without him, no correspondence without his knowledge and approval); discount limit, topics to avoid and G Fiber checks left blank"
+    "setup-questions: round 5 (rules) 2026-10-10: Fran gave 2 rules (no price quotes without him, no correspondence without his knowledge and approval); discount limit, topics to avoid and G Fiber checks left blank",
+    "setup-backup: checked 2026-10-28: the Oct 9 computer backup never reached Drive (no copy under Other computers or My Drive); with Fran's OK the brain was copied to G:\\My Drive\\basic-american-enterprises-brain so the desktop computer can open it; the Desktop folder copy is not kept in sync with it",
+    "setup-files: resumed 2026-10-28 on the desktop computer; inbox opened fine; Fran stopped before dropping files; next: price list, 2-3 real quotes or invoices, common customer questions, each tagged by company"
   ]
 }
