@@ -10,7 +10,9 @@ One line per open item: `- [ ] what · for whom · by when`. Done items get `[x]
 - [ ] Find who has the WordPress login; change the password and delete the 29 spam posts · Basic American Enterprises · before the rebuild
 
 - [ ] Website changes: revise basicamericanenterprises.com, build Basic American Intelligence, revise basicamericannetworks.com (handoffs/websites-2026-10.md) · Fran · [date TO CONFIRM]
-- [ ] Website round four, last open items (projects/BAE-website/ROUND-FOUR.md): pick the logo (review/bae-logo-options.html), give one-line descriptions and "Sold to" lines for Block Battery and BlackMP (diligence section removed 2026-10-31) · Fran · [date TO CONFIRM]
+- [ ] Website round four, last open items (projects/BAE-website/ROUND-FOUR.md): pick the logo (review/bae-logo-options.html) (Block Battery and BlackMP lines done 2026-11-01) · Fran · [date TO CONFIRM]
+- [ ] Website forms: create a form in Web3Forms (account made 2026-11-01), paste its access key into projects/BAE-website/site/assets/send.js, test, publish · Fran · [date TO CONFIRM]
+- [ ] Cancel the GoDaddy website hosting plan only (keep the domain, DNS and Microsoft 365 email); the site moved to Vercel 2026-11-01 · Fran · before the hosting renews
 - [ ] Send Sam the website wireframe Fran has in mind (call notes 2026-10-01) · Fran · [date TO CONFIRM]
 - [ ] Block Battery and BlackMP stay in the portfolio (Fran, 2026-10-31); still to confirm: how each venture relates to Basic American Enterprises (owned, incubated, invested) · Fran · [date TO CONFIRM]
 - [ ] Set up the Windows desktop to run the brain (Drive, Outlook, Claude, GitHub copy, move the scheduled check): handoffs/desktop-setup-2026-10.md · Fran · [date TO CONFIRM]

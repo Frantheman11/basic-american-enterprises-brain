@@ -25,6 +25,8 @@ If Python is missing, edit it by hand, one line per page; the next rebuild repla
 - [IoT Data Group LLC](wiki/companies/iot-data-group.md) (not written yet)
 - [Clear Insights AI Inc.](wiki/companies/clear-insights-ai.md) (not written yet)
 - [Custom Tailored Agents LLC](wiki/companies/custom-tailored-agents.md) (not written yet)
+- [BlackMP](wiki/companies/blackmp.md) (stub: website, one line, who it is sold to)
+- [Block Battery](wiki/companies/block-battery.md) (stub: website, one line, who it is sold to)
 
 ## Handoffs
 
