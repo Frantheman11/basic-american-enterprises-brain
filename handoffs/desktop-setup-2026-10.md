@@ -34,8 +34,9 @@ email); the laptop can sleep and is used on the go. No migration: the same folde
 - The updated site (projects/BAE-website/site) was viewed here and differs from Sam's Oct 19 zip.
   The phone on the page is 562-573-3200 in both copies; what the "phone fix" changed is not confirmed.
 - Setup paused at setup-files (see setup/progress.json).
+- Step 4 done 2026-10-31: git 2.56 installed with winget (C:\Program Files\Git\cmd\git.exe); Fran signed in
+  to GitHub once; first push from the desktop worked. Both folders added to git's safe.directory.
 
 ## Not done
-- Step 4: no git and no GitHub Desktop on the desktop yet, so nothing can be pushed from here.
 - Steps 2, 5, 6, 7. Scheduled task file-sam-website-reply is off since 2026-10-20 (Sam correspondence shut off).
 - Sessions do not sync between computers; this handoff and log.md carry the work across.

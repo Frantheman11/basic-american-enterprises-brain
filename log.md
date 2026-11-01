@@ -59,3 +59,4 @@ One line per change, newest last: date · what · from where.
 2026-10-31 · GitHub: Fran's account is Frantheman11 (franmcgrath11@gmail.com; the profile menu shows Frantheman11). Private repos Frantheman11/basic-american-enterprises-brain and Frantheman11/BAE-website created by Fran. ipost-sports (2026-10-18 entry) is a separate account · Fran, in chat
 2026-10-31 · Brain and BAE website pushed to private GitHub repos under Frantheman11; end-of-session save-and-push habit (one computer at a time, after Drive syncs) added to CLAUDE.md Working style and handoffs/desktop-setup-2026-10.md step 4 · Fran, in chat
 2026-10-31 · Desktop session saved to handoffs/desktop-setup-2026-10.md (Drive syncs it); GitHub push waits on git for the desktop · Fran, in chat
+2026-10-31 · Git installed on the desktop; Fran signed in to GitHub; brain pushed to Frantheman11/basic-american-enterprises-brain from the desktop · Fran, in chat
