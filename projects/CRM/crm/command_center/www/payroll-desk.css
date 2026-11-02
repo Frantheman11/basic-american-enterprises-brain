@@ -1,0 +1,49 @@
+/* Prevailing Wage Desk. One sheet, server-rendered page, prints cleanly. */
+:root{--ink:#1d232b;--muted:#5b6673;--line:#d9dee4;--bg:#f4f5f7;--panel:#fff;--accent:#1f5f8b;--flag:#a4371b;
+--flag-bg:#fbeee9;--ok:#2d6a3e;--ok-bg:#e8f3eb;--note:#fff6dc;--note-line:#e2c35c}
+*{box-sizing:border-box}
+body.pw{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.pw-top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding:14px 24px;
+background:#1d232b;color:#fff}
+.pw-top small{display:block;color:#b9c3cd;font-size:14px}
+.pw-top nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+.pw-top a{color:#fff;text-decoration:none;font-size:15px}
+.pw-top a:hover{text-decoration:underline}
+main{max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+h2{margin:36px 0 6px;font-size:22px}
+h3{margin:22px 0 6px;font-size:18px}
+.pw-sample{background:var(--note);border:1px solid var(--note-line);padding:10px 14px;border-radius:8px;margin:0 0 10px}
+.pw-legal{background:var(--panel);border-left:4px solid var(--accent);padding:10px 14px;border-radius:6px;margin:0 0 10px}
+#pw-msg{color:var(--flag);font-weight:600;min-height:1em;margin:6px 0}
+.pw-hint{color:var(--muted);margin:0 0 10px;max-width:80ch}
+.pw-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:10px 0}
+.pw-kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.pw-kpi span{display:block;color:var(--muted);font-size:14px}
+.pw-kpi strong{display:block;font-size:30px;line-height:1.2}
+.pw-kpi small{color:var(--muted);font-size:13px}
+.pw-scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eef1f4;font-size:14px;color:var(--muted);font-weight:600}
+td small{display:block;color:var(--muted);font-size:13.5px;max-width:60ch}
+tr.pw-short td{background:var(--flag-bg)}
+#flags td:nth-child(2),.pw-print td:nth-child(2){white-space:nowrap}
+.pw-flag{color:var(--flag);font-weight:600}
+.pw-ok{color:var(--ok);font-weight:600}
+.pw-clear{display:flex;gap:6px;min-width:260px}
+.pw-clear input{flex:1;min-width:0}
+input,select,button{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px}
+button,.pw-btn{background:var(--accent);color:#fff;border-color:var(--accent);cursor:pointer;text-decoration:none;
+display:inline-block;padding:6px 12px;border-radius:6px}
+button:disabled{opacity:.45;cursor:not-allowed}
+label{display:inline-flex;gap:6px;align-items:center;margin:4px 12px 4px 0}
+.pw-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.pw-packet{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.pw-packet h3{margin-top:0}
+.pw-packet[data-state=reviewed]{border-left:4px solid var(--ok)}
+.pw-packet[data-state=open],.pw-packet[data-state=changed]{border-left:4px solid var(--flag)}
+.pw-draft{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:8px 0}
+.pw-draft pre{white-space:pre-wrap;font:inherit;background:var(--bg);padding:10px;border-radius:6px}
+.pw-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.pw-print table{background:var(--panel)}
+@media print{.pw-top,form,button,.pw-btn{display:none}body.pw{background:#fff}}

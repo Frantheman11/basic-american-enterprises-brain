@@ -1,0 +1,48 @@
+{
+ "portfolio_id": "basic-american",
+ "name": "Basic American",
+ "path_prefix": "/",
+ "owners": [
+  "fran"
+ ],
+ "timezone": "America/Los_Angeles",
+ "database_dir": "private",
+ "palette": [
+  "#1d4ed8",
+  "#0f766e",
+  "#7c3aed",
+  "#b45309",
+  "#be123c",
+  "#15803d",
+  "#4338ca",
+  "#a21caf",
+  "#0e7490",
+  "#57534e"
+ ],
+ "businesses": [
+  {
+   "business_id": "bae",
+   "label": "BAE",
+   "color": "#1d4ed8",
+   "database": "private/bae.sqlite3"
+  },
+  {
+   "business_id": "basic-american-intelligence",
+   "label": "Basic American Intelligence",
+   "color": "#7c3aed",
+   "database": "private/basic-american-intelligence.sqlite3"
+  },
+  {
+   "business_id": "basic-american-networks",
+   "label": "Basic American Networks",
+   "color": "#b45309",
+   "database": "private/basic-american-networks.sqlite3"
+  },
+  {
+   "business_id": "ipost-sports",
+   "label": "iPost Sports",
+   "color": "#be123c",
+   "database": "private/ipost-sports.sqlite3"
+  }
+ ]
+}

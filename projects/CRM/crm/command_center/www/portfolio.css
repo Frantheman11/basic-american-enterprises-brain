@@ -1,0 +1,42 @@
+/* Portfolio tabs: one tab per business in its own color, a bar in the active business's color. */
+.ws-portfolio{background:var(--ws-bg,#f6f6f4);border-bottom:0}
+.ws-biz-tabs{display:flex;flex-wrap:nowrap;align-items:flex-end;gap:4px;padding:8px 24px 0;overflow-x:auto;scrollbar-width:none}.ws-biz-tabs::-webkit-scrollbar{display:none}
+.workspace-design .ws-biz-tab{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;min-height:38px;padding:8px 14px;border:1px solid var(--ws-line);border-bottom:0;border-radius:9px 9px 0 0;background:var(--ws-panel);color:var(--ws-muted);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap}
+.workspace-design .ws-biz-tab:hover{color:var(--ws-text);box-shadow:inset 0 -3px var(--tab)}
+.ws-biz-dot{width:10px;height:10px;border-radius:50%;background:var(--tab);flex-shrink:0}
+.workspace-design .ws-biz-tab[aria-current=page]{background:var(--tab);border-color:var(--tab);color:#fff;font-weight:600}
+.workspace-design .ws-biz-tab[aria-current=page] .ws-biz-dot{background:#fff}
+.workspace-design .ws-biz-tab:focus-visible,.workspace-design .ws-biz-add:focus-visible{outline:2px solid var(--ws-link);outline-offset:2px}
+.workspace-design .ws-biz-add{flex-shrink:0;min-width:38px;min-height:34px;margin:0 0 2px 4px;padding:0 10px;border:1px dashed var(--ws-input-line);border-radius:8px;background:transparent;color:var(--ws-text);font-size:18px;line-height:1;cursor:pointer}
+.workspace-design .ws-biz-add:hover{border-style:solid;color:var(--ws-link)}
+.ws-biz-bar{height:5px;background:var(--biz)}
+.workspace-design .ws-portfolio~.ws-header .ws-mark{background:var(--biz)}
+.workspace-design .ws-biz-dialog{width:min(440px,calc(100vw - 24px));padding:0;border:1px solid var(--ws-line);border-radius:14px;background:var(--ws-panel);color:var(--ws-text);box-shadow:0 20px 60px #0003}
+.ws-biz-dialog::backdrop{background:#0004}
+.ws-biz-dialog form{display:grid;gap:14px;padding:20px}
+.workspace-design .ws-biz-dialog h2{margin:0;font-size:18px}
+.ws-biz-dialog p{margin:0;font-size:13px;color:var(--ws-muted)}
+.ws-biz-dialog label{display:grid;gap:5px;font-size:13px;font-weight:500}
+.workspace-design .ws-biz-dialog :is(input:not([type=radio]),select){width:100%;box-sizing:border-box;min-height:38px;padding:7px 10px;border:1px solid var(--ws-input-line);border-radius:7px;background:var(--ws-panel);color:var(--ws-text)}
+.ws-biz-dialog fieldset{margin:0;padding:0;border:0}.ws-biz-dialog legend{font-size:13px;font-weight:500;margin-bottom:6px}
+.ws-biz-swatches{display:flex;flex-wrap:wrap;gap:8px}
+.ws-biz-swatch{position:relative;display:block!important;width:32px;height:32px;border-radius:50%;background:var(--tab);cursor:pointer}
+.ws-biz-swatch input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.ws-biz-swatch span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.ws-biz-swatch:has(input:checked){box-shadow:0 0 0 3px var(--ws-panel),0 0 0 5px var(--tab)}
+.ws-biz-swatch:has(input:focus-visible){outline:2px solid var(--ws-link);outline-offset:4px}
+.ws-biz-dialog .ws-biz-error{color:var(--ws-danger)}.ws-biz-dialog .ws-biz-error:empty{display:none}
+.ws-biz-actions{display:flex;justify-content:flex-end;gap:8px}
+.workspace-design .ws-biz-actions button{min-height:38px;padding:7px 14px;border:1px solid var(--ws-line);background:var(--ws-panel);color:var(--ws-text)}
+.workspace-design .ws-biz-actions .primary{background:var(--ws-action);border-color:var(--ws-action);color:#fff}
+@media(max-width:650px){.ws-biz-tabs{padding:6px 12px 0;gap:3px}.workspace-design .ws-biz-tab{min-height:36px;padding:7px 11px;font-size:13px}.ws-biz-bar{height:4px}}
+/* Linked people (P4): "Also in" on a contact. */
+.ws-also .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ws-also-list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.ws-also-list li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border:1px solid var(--ws-line);border-left:4px solid var(--tab);border-radius:8px;flex-wrap:wrap}
+.ws-also-list a,.ws-also-list li>span{display:inline-flex;align-items:center;gap:8px;color:inherit;font-weight:500}
+.ws-also-list small{color:var(--ws-muted);font-weight:400}
+.ws-also-error{color:var(--ws-danger)}.ws-also-error:empty{display:none}
+/* Export one business (P6), in the account menu. */
+.ws-export{display:grid;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--ws-line)}
+.ws-export-note{margin:0;font-size:12px;color:var(--ws-muted)}.ws-export-note:empty{display:none}

@@ -1,0 +1,41 @@
+/* Demo layer: the demo line on top, the guided-tour card, its target outline and the resume chip.
+   crm.css tokens only. On a phone the tour is a compact bar at the bottom. */
+.demo-banner{display:flex;align-items:center;justify-content:center;gap:10px;padding:5px 14px;
+  font-size:14px;background:var(--ink);color:var(--bg);text-align:center;align-self:stretch;white-space:nowrap}
+.demo-banner .demo-line{overflow:hidden;text-overflow:ellipsis;min-width:0}
+.demo-banner .demo-back{color:inherit;font-weight:600;min-height:32px;display:inline-flex;align-items:center;flex-shrink:0}
+.demo-banner b{background:var(--accent);color:var(--on-accent);border-radius:999px;padding:1px 9px;letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+.demo-banner .demo-open{min-height:32px;padding:3px 12px;font-size:14px;border-radius:999px;background:transparent;color:inherit;
+  border:1px solid currentColor;box-shadow:none;flex-shrink:0}
+.demo-tour{position:fixed;z-index:40;right:20px;bottom:20px;width:min(380px,calc(100vw - 32px));background:var(--surface);
+  color:var(--ink);border-radius:var(--r-sm);box-shadow:var(--deep),var(--lift);padding:16px 18px 14px;
+  border-top:4px solid var(--accent);text-align:left}
+.demo-tour h2{font-size:20px;margin:6px 0 4px}
+.demo-tour p{margin:0 0 10px;font-size:16px;line-height:1.45}
+.demo-tour-head{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:15px;color:var(--muted)}
+.demo-tour .demo-short{display:none}
+.demo-tour .demo-close{min-height:44px;padding:4px 6px;font-size:15px;background:transparent;box-shadow:none;color:var(--ink);
+  text-decoration:underline;text-underline-offset:3px}
+.demo-dots{display:flex;gap:6px;list-style:none;margin:0 0 12px;padding:0}
+.demo-dots button{min-height:0;width:22px;height:6px;padding:0;border-radius:3px;background:var(--line);box-shadow:none}
+.demo-dots [aria-current] button{background:var(--accent)}
+.demo-actions{display:flex;justify-content:space-between;gap:8px}
+.demo-actions button{flex:0 1 auto;min-height:44px}
+.demo-hint{font-size:16px!important;color:var(--muted)}
+/* What the step points at */
+.demo-target{outline:3px solid var(--accent);outline-offset:4px;border-radius:var(--r-sm,12px);
+  box-shadow:0 0 0 9px color-mix(in srgb,var(--accent) 18%,transparent)}
+/* The tour folded away while the owner looks around: one tap brings it back */
+.demo-resume{position:fixed;z-index:40;right:16px;bottom:16px;min-height:48px;padding:10px 18px;border-radius:999px;
+  background:var(--ink);color:var(--bg);font-weight:600;font-size:16px;box-shadow:var(--deep),var(--lift)}
+@media (max-width:640px){
+  .demo-banner{justify-content:flex-start;padding:4px 10px;font-size:13px;gap:8px}
+  .demo-banner .demo-open{margin-left:auto;font-size:13px;min-height:30px;padding:2px 10px}
+  .demo-tour{left:0;right:0;bottom:0;width:100%;border-radius:var(--r-sm) var(--r-sm) 0 0;padding:6px 14px 10px;box-sizing:border-box}
+  .demo-tour h2,.demo-dots{display:none}
+  .demo-tour .demo-short{display:inline;color:var(--ink);font-weight:700}
+  .demo-tour .demo-long{display:none}
+  .demo-tour p{font-size:15px;margin:0 0 8px;line-height:1.4}
+  .demo-actions button{padding:8px 18px}
+  .demo-resume{left:16px;right:16px;bottom:12px}
+}

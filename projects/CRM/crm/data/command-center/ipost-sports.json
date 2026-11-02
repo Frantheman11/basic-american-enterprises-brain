@@ -1,0 +1,269 @@
+{
+ "business_id": "ipost-sports",
+ "name": "iPost Sports",
+ "tagline": "iPost Sports",
+ "root": ".",
+ "stylesheet": "brand.css",
+ "views": [
+  "board",
+  "today",
+  "pipeline",
+  "agents",
+  "brain"
+ ],
+ "departments": [
+  {
+   "id": "sales",
+   "label": "Sales",
+   "plain_english": "Estimates, and chasing them.",
+   "owns": "Leads and follow-up.",
+   "sources": [
+    "records/**"
+   ]
+  },
+  {
+   "id": "service",
+   "label": "Service",
+   "plain_english": "Trucks and invoices.",
+   "owns": "Dispatch.",
+   "sources": []
+  }
+ ],
+ "access": {
+  "identity": "local",
+  "local_person": "fran",
+  "origins": []
+ },
+ "roles": {
+  "admin": {
+   "sees": "all",
+   "views": [
+    "board",
+    "today",
+    "pipeline",
+    "agents",
+    "brain"
+   ],
+   "can": [
+    "assign",
+    "reassign",
+    "convert",
+    "decide",
+    "queue",
+    "set_field",
+    "crm_read",
+    "crm_create",
+    "crm_edit",
+    "crm_assign"
+   ]
+  },
+  "rep": {
+   "sees": "own",
+   "views": [
+    "today",
+    "pipeline"
+   ],
+   "can": [
+    "set_field",
+    "log_touch",
+    "release",
+    "claim",
+    "create_lead",
+    "crm_read",
+    "crm_create",
+    "crm_edit"
+   ],
+   "fields": {
+    "lead": [
+     "stage",
+     "notes"
+    ]
+   }
+  },
+  "territory_lead": {
+   "sees": "territory",
+   "views": [
+    "today",
+    "pipeline"
+   ],
+   "can": [
+    "set_field",
+    "log_touch",
+    "release",
+    "claim",
+    "create_lead",
+    "crm_read",
+    "crm_create",
+    "crm_edit"
+   ],
+   "fields": {
+    "lead": [
+     "stage",
+     "notes"
+    ]
+   }
+  }
+ },
+ "people": {
+  "members": [
+   {
+    "id": "fran",
+    "name": "Fran McGrath",
+    "role": "admin",
+    "title": "owner",
+    "emails": [
+     "franmcgrath11@gmail.com"
+    ],
+    "focus": null
+   }
+  ]
+ },
+ "records": {
+  "lead": {
+   "path": "records/leads",
+   "human_owned": [
+    "stage",
+    "owner",
+    "notes",
+    "approval.decision",
+    "queue_status"
+   ],
+   "required": [
+    "lead_id",
+    "captured_at",
+    "source"
+   ]
+  },
+  "conversation": {
+   "path": "records/conversations",
+   "human_owned": [
+    "summary"
+   ],
+   "visible_through": {
+    "subject.lead_id": "lead"
+   },
+   "required": [
+    "event_id",
+    "at",
+    "subject"
+   ]
+  },
+  "queue_item": {
+   "path": "records/queue",
+   "human_owned": [
+    "queue_status",
+    "notes",
+    "approval.decision"
+   ]
+  }
+ },
+ "pipeline": {
+  "stages": [
+   {
+    "id": "new",
+    "label": "New",
+    "plain_english": "New.",
+    "fires": []
+   },
+   {
+    "id": "proposal_out",
+    "label": "Proposal out",
+    "plain_english": "Proposal out.",
+    "fires": []
+   },
+   {
+    "id": "won",
+    "label": "Won",
+    "plain_english": "Won.",
+    "fires": [],
+    "terminal": true,
+    "outcome": "won"
+   },
+   {
+    "id": "lost",
+    "label": "Lost",
+    "plain_english": "Lost.",
+    "fires": [],
+    "terminal": true,
+    "outcome": "lost"
+   }
+  ]
+ },
+ "crm": {
+  "accent": "#be123c",
+  "currency": "USD",
+  "territories": {
+   "regions": [
+    {
+     "id": "west",
+     "label": "West",
+     "states": [
+      "AK",
+      "AZ",
+      "CA",
+      "CO",
+      "HI",
+      "ID",
+      "MT",
+      "NM",
+      "NV",
+      "OR",
+      "UT",
+      "WA",
+      "WY"
+     ]
+    },
+    {
+     "id": "central",
+     "label": "Central",
+     "states": [
+      "AL",
+      "AR",
+      "IA",
+      "IL",
+      "IN",
+      "KS",
+      "KY",
+      "LA",
+      "MI",
+      "MN",
+      "MO",
+      "MS",
+      "ND",
+      "NE",
+      "OH",
+      "OK",
+      "SD",
+      "TN",
+      "TX",
+      "WI"
+     ]
+    },
+    {
+     "id": "east",
+     "label": "East",
+     "states": [
+      "CT",
+      "DC",
+      "DE",
+      "FL",
+      "GA",
+      "MA",
+      "MD",
+      "ME",
+      "NC",
+      "NH",
+      "NJ",
+      "NY",
+      "PA",
+      "RI",
+      "SC",
+      "VA",
+      "VT",
+      "WV"
+     ]
+    }
+   ]
+  }
+ }
+}

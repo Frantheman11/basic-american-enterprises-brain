@@ -1,0 +1,267 @@
+/* Gym screens and the check-in kiosk. Built on crm.css: its tokens (--bg, --surface, --ink, --muted,
+   --line, --accent, --ok, --danger, --lift) and its buttons, fields and dialog. No colour of its own.
+   A business theme (crm.theme_stylesheet) may also set --brand-bar and --brand-bar-ink (the header
+   bar), --brand-display (headings) and --brand-logo-h (the logo height), so each gym looks like itself.
+   "No colour of its own" except the status tokens below, which keep alarm red apart from a red brand. */
+
+/* Status colours, apart from the brand: red only for money that failed (with a tinted card), amber
+   for members not seen, green for a stripe due, near-black for the class on the mat now. Built on
+   crm.css's --danger and --ok so a gym's red accent never doubles as an alarm. */
+:root{--st-bad:var(--danger);--st-bad-bg:color-mix(in srgb,var(--danger) 8%,var(--surface));
+  --st-warn:#8A5300;--st-warn-bg:#FFF0D4;--st-good:var(--ok);--st-good-bg:color-mix(in srgb,var(--ok) 12%,var(--surface));
+  --st-now:#1A1A1A;--st-now-ink:#fff;--belt-edge:rgba(0,0,0,.45)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--st-warn:#FFC266;--st-warn-bg:rgba(255,176,32,.16);
+  --st-now:#F2F2F2;--st-now-ink:#111;--belt-edge:rgba(255,255,255,.5)}}
+:root[data-theme="dark"]{--st-warn:#FFC266;--st-warn-bg:rgba(255,176,32,.16);--st-now:#F2F2F2;--st-now-ink:#111;--belt-edge:rgba(255,255,255,.5)}
+
+body.gym{margin:0;font-size:17px}
+.gym-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;
+  background:var(--brand-bar,var(--glass));color:var(--brand-bar-ink,var(--ink));border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.gym-brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;min-width:0}
+.gym-brand strong{display:block;font-size:17px;font-family:var(--brand-display,inherit);letter-spacing:.01em}
+.gym-brand small{color:inherit;opacity:.7}
+.gym-logo{height:var(--brand-logo-h,44px);width:auto;border-radius:6px;flex-shrink:0}
+.gym-top nav{display:flex;flex-wrap:wrap;gap:4px;padding:0;margin:0;position:static}  /* crm.css pads and pins a nav for its own sidebar */
+.gym-top nav a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
+.gym-top nav a{padding:8px 12px;border-radius:10px;color:inherit;text-decoration:none}
+.gym-top nav a[aria-current="page"]{background:var(--accent);color:var(--on-accent);font-weight:600}
+#gym h1,#kiosk h1{font-family:var(--brand-display,inherit);letter-spacing:.01em}
+#gym{padding:20px;max-width:1200px;margin:0 auto}
+#gym h1{font-size:26px;margin:0 0 4px}
+#gym h2{font-size:18px;margin:0 0 10px}
+.gym-sub{color:var(--muted);margin:0 0 18px}
+.gym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.gym-card{background:var(--surface);border-radius:var(--r-sm);box-shadow:var(--lift);padding:16px;min-width:0}
+.gym-card.wide{grid-column:1/-1}
+.gym-card.alert{background:var(--st-bad-bg);box-shadow:var(--lift),inset 4px 0 0 var(--st-bad)}
+#gym [id]{scroll-margin-top:calc(var(--gym-top,76px) + 12px)}
+.gym-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.gym-stat{position:relative;background:var(--surface);border-radius:var(--r-sm);box-shadow:var(--lift);padding:14px 30px 14px 16px;
+  color:inherit;text-decoration:none;border:2px solid transparent}
+a.gym-stat:hover{border-color:var(--line)}
+a.gym-stat::after{content:"\203A";position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--muted)}
+.gym-stat b{display:block;font-size:30px;line-height:1.1}
+.gym-stat span{color:var(--muted);font-size:15px}
+.gym-stat.bad{background:var(--st-bad-bg);border-color:color-mix(in srgb,var(--st-bad) 35%,transparent)}
+.gym-stat.bad b{color:var(--st-bad)}
+.gym-stat.warn b{color:var(--st-warn)}
+.gym-stat.good b{color:var(--st-good)}
+@media (min-width:700px){.gym-stats{grid-template-columns:repeat(5,minmax(0,1fr))}.gym-stats.three{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.gym-stat.off b{font-size:17px;padding-top:6px}
+.gym-list{list-style:none;margin:0;padding:0}
+.gym-list li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 10px;padding:9px 0;border-top:1px solid var(--line)}
+.gym-list li button{white-space:nowrap}
+.gym-list li:first-child{border-top:0}
+.gym-card.wide .gym-list{columns:3 260px;column-gap:24px}
+.gym-card.wide .gym-list li{break-inside:avoid}
+.gym-list a{color:var(--ink);font-weight:600;text-decoration:none}
+.gym-list a:hover{color:var(--accent)}
+.gym-muted{color:var(--muted);font-size:15px}
+.gym-empty{color:var(--muted);margin:4px 0}
+.gym-pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:14px;background:var(--field);white-space:nowrap}
+.gym-pill.now{background:var(--st-now);color:var(--st-now-ink);font-weight:600}
+.gym-pill.next{background:transparent;box-shadow:inset 0 0 0 1px var(--belt-edge);color:var(--ink)}
+.gym-pill.canceled{background:var(--st-warn-bg);color:var(--st-warn);font-weight:600}
+.gym-pill.ok{color:var(--ok)}
+.gym-pill.good{background:var(--st-good-bg);color:var(--st-good);font-weight:600}
+.gym-pill.warn{background:var(--st-warn-bg);color:var(--st-warn);font-weight:600}
+.gym-pill.bad{background:var(--st-bad-bg);color:var(--st-bad);font-weight:600}
+.gym-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.gym-came{color:var(--st-good);font-weight:700;font-size:15px;white-space:nowrap}
+.gym-list li[hidden]{display:none}
+/* Quiet actions: a text button for what is rare (cancel a class, show all), a link that looks like a button */
+button.gym-quiet{background:transparent;box-shadow:none;color:var(--muted);text-decoration:underline;padding:8px 4px;min-height:44px;font-size:15px}
+button.gym-quiet:hover{color:var(--ink);box-shadow:none}
+a.gym-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:12px;background:var(--control);
+  box-shadow:var(--lift);color:var(--ink);font-weight:600;text-decoration:none}
+a.gym-btn.primary{background:var(--accent);color:var(--on-accent)}
+label.gym-file{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;margin:8px 0 0;border-radius:12px;
+  cursor:pointer;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:16px}
+label.gym-file input{position:absolute;width:1px;height:1px;opacity:0}
+label.gym-file:focus-within{outline:2px solid var(--ink);outline-offset:2px}
+.gym-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* The placeholder while a screen loads: grey shapes, no words that flash */
+.gym-skel i{display:block;background:var(--field);border-radius:10px;margin:0 0 12px;animation:gym-pulse 1.4s ease-in-out infinite}
+.gym-skel .h{height:30px;width:40%}.gym-skel .row{height:18px;width:70%}.gym-skel .card{height:140px;border-radius:var(--r-sm)}
+@keyframes gym-pulse{50%{opacity:.5}}
+.gym-class{display:grid;grid-template-columns:76px 1fr;gap:4px 10px;align-items:start;padding:10px 0;border-top:1px solid var(--line)}
+.gym-class:first-child{border-top:0}
+.gym-class .t{font-weight:700}
+.gym-class .c{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.gym-class.canceled .n{text-decoration:line-through;color:var(--muted)}
+.gym-belt{display:inline-block;width:28px;height:10px;border-radius:3px;vertical-align:middle;margin-right:6px;
+  border:1px solid var(--belt-edge);background:var(--belt,var(--field))}
+.gym-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.gym-toolbar input,.gym-toolbar select{width:auto;min-width:200px;flex:1}
+.gym-table{width:100%;border-collapse:collapse}
+.gym-table th,.gym-table td{text-align:left;padding:10px 8px;border-top:1px solid var(--line);vertical-align:top}
+.gym-table th{font-size:14px;color:var(--muted);font-weight:600;border-top:0}
+.gym-table a{color:var(--ink);font-weight:600}
+.gym-roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.gym-roster button{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;width:100%;min-height:56px}
+.gym-roster button[aria-pressed="true"]{background:var(--st-now);color:var(--st-now-ink)}
+.gym-roster small{color:inherit;opacity:.75}
+.gym-roster button>span:last-child{white-space:nowrap;flex-shrink:0;font-weight:600}
+/* The week: seven columns where they fit, else days wrap into rows. Never a sideways scroll. */
+.gym-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+@media (max-width:1100px){.gym-week{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+.gym-day .gym-card a{overflow-wrap:anywhere}
+.gym-day h3{font-size:15px;margin:0 0 6px}
+.gym-day .gym-card{padding:10px;margin-bottom:8px}
+.gym-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+.gym-field{margin:0 0 12px}
+.gym-field label{display:block;font-size:15px;font-weight:600;margin-bottom:4px}
+.gym-banner{padding:12px 14px;border-radius:12px;background:var(--tint);margin:0 0 14px}
+.gym-dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;margin:0}
+.gym-dl dt{color:var(--muted)}
+.gym-dl dd{margin:0}
+.gym-table .nowrap{white-space:nowrap}
+.gym-weekly td{white-space:normal}  /* crm.css keeps table cells on one line */
+.gym-wrap{overflow-x:auto}  /* a safety net: the weekly table wraps its words to fit */
+.gym-print{white-space:nowrap}
+.gym-sub>span+.gym-print{margin-left:10px}
+.gym-checkin-today{display:flex;flex-wrap:wrap;gap:8px}
+.gym-roster-h{display:flex;align-items:baseline;gap:8px;font-size:17px;margin:18px 0 8px}
+.gym-roster-foot{margin-top:28px}
+/* The waiver dot: green when signed, an amber ring when not; the legend says which is which */
+.gym-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:7px;vertical-align:middle;flex-shrink:0}
+.gym-dot.ok{background:var(--st-good)}
+.gym-dot.no{background:transparent;box-shadow:inset 0 0 0 2px var(--st-warn)}
+.gym-roster button[aria-pressed="true"] .gym-dot.no{box-shadow:inset 0 0 0 2px #FFC266}
+.gym-who{display:inline-flex;align-items:center}
+.gym-legend{font-size:14px;color:var(--muted);margin:0 0 8px}
+.gym-legend .gym-dot{margin-left:10px}.gym-legend .gym-dot:first-child{margin-left:0}
+/* The Check-in page: the codes to print */
+.gym-qr-img svg{width:min(260px,100%);height:auto;display:block;margin:4px 0 8px;border-radius:8px}
+.gym-qr-url{overflow-wrap:anywhere;font-size:13px}
+/* The door pages on a member's phone */
+body.door #kiosk{text-align:center}
+.door-form{display:grid;gap:12px;max-width:460px;margin:0 auto}
+.door-form.door-left{text-align:left}
+.door-form label{display:grid;gap:6px;font-weight:600;font-size:17px}
+.door-form input{font-size:18px;padding:12px;margin:0;text-align:left}
+#kiosk .door-form input{font-size:18px;padding:12px;margin:0;text-align:left}
+.door-form label.door-check{display:flex;align-items:center;gap:10px;font-weight:500}
+.door-form label.door-check input{width:24px;height:24px;flex-shrink:0}
+.door-text{text-align:left;white-space:pre-wrap;background:var(--surface);border-radius:14px;padding:14px 16px;max-height:44vh;overflow:auto;
+  font-size:16px;line-height:1.5;margin:0 auto 18px;max-width:640px;box-shadow:var(--lift)}
+.door-title{font-size:22px;margin:4px 0 10px}
+.door-hint{font-size:15px!important;color:var(--muted);margin:0}
+.door-big{min-height:56px;font-size:19px}
+#kiosk .kiosk-classes button[aria-pressed="true"]{background:var(--st-now);color:var(--st-now-ink)}
+/* Attendance: the range picker, the bar chart, the change arrows, the member's 12 months */
+.gym-range label{display:inline-flex;align-items:center;gap:6px;font-size:15px;color:var(--muted)}
+.gym-range input[type="date"]{min-width:0;width:auto;flex:0 1 auto}
+.gym-range .gym-choice{margin:0;flex-basis:100%}
+.gym-chart{display:flex;align-items:flex-end;gap:3px;height:190px;padding-top:18px}
+.gym-chart .gym-bar,.gym-months>div{flex:1 1 0;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.gym-chart i,.gym-months i{display:block;width:100%;max-width:38px;background:var(--accent);border-radius:4px 4px 0 0;min-height:1px}
+.gym-chart .n,.gym-months .n{font-size:12px;color:var(--muted);line-height:1.2}
+.gym-chart .l,.gym-months .l{font-size:12px;color:var(--muted);height:16px;white-space:nowrap;overflow:visible}
+.gym-months{display:flex;align-items:flex-end;gap:4px;height:90px;margin:6px 0 14px}
+.gym-up{color:var(--st-good);font-weight:700;font-size:14px;white-space:nowrap}
+.gym-down{color:var(--st-warn);font-weight:700;font-size:14px;white-space:nowrap}
+.gym-rule{margin:-4px 0 8px;font-size:14px}
+a.gym-call{font-weight:600;color:var(--accent);white-space:nowrap}
+.gym-att td{white-space:normal}
+#gym-error{color:var(--danger)}
+/* Touch: every link and button is at least 44px tall */
+@media (pointer:coarse),(max-width:640px){
+  .gym-list a,.gym-class a,.gym-table a,.gym-day a,.gym-toolbar a,.gym-sub a,#gym>p>a{display:inline-flex;align-items:center;min-height:44px}
+}
+/* Laptop, tablet and phone: the tabs are one row that scrolls sideways (never a second row that makes
+   the sticky header tall); a fade and an arrow show more tabs */
+@media (max-width:1440px){
+  .gym-top{flex-wrap:nowrap}
+  .gym-top nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1 1 auto}
+  .gym-top nav::-webkit-scrollbar{display:none}
+  .gym-top nav.more-right{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent);
+    mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent)}
+  .gym-top nav.more-left.more-right{-webkit-mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 64px),transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 64px),transparent)}
+  .gym-top nav.more-left:not(.more-right){-webkit-mask-image:linear-gradient(90deg,transparent,#000 32px);
+    mask-image:linear-gradient(90deg,transparent,#000 32px)}
+  .gym-top:has(nav.more-right)::after{content:"\203A";position:absolute;right:8px;bottom:50%;transform:translateY(50%);
+    font-size:28px;line-height:1;pointer-events:none;font-weight:700}
+  .gym-top nav a{white-space:nowrap;padding:8px 9px}
+  .gym-top nav{gap:2px}
+  .gym-brand{flex-shrink:0}
+  .gym-brand strong{white-space:nowrap}
+  .gym-brand small{display:none}
+}
+@media (max-width:900px) and (min-width:641px){.gym-brand:has(.gym-logo) strong{display:none}}  /* tablet: the logo names the gym */
+@media (max-width:640px){
+  #gym{padding:14px}
+  .gym-top{flex-wrap:wrap;padding:6px 12px 0;gap:4px 8px}
+  .gym-brand small{display:none}
+  .gym-brand strong{font-size:16px}
+  .gym-top nav{width:100%;flex-basis:100%;margin:0 -4px;padding-bottom:6px}
+  .gym-top:has(nav.more-right)::after{bottom:14px;transform:none}
+  .gym-top nav a{padding:6px 10px}
+  .gym-logo{height:min(var(--brand-logo-h,44px),52px)}
+  .gym-stats{grid-template-columns:1fr 1fr;gap:10px}
+  .gym-stats>:first-child{grid-column:1/-1}
+  .gym-members td{white-space:normal}
+  .gym-members td:first-child{width:52%}
+  .gym-week{grid-template-columns:1fr}
+  .gym-print{display:block;margin:0!important}
+  .gym-range label{flex:1 1 40%}
+  .gym-range label input[type="date"]{flex:1 1 auto;width:100%}
+  .gym-range select{flex-basis:100%}
+  .gym-table .hide-sm{display:none}
+  .gym-table th,.gym-table td{padding:8px 4px}
+  .gym-card{padding:12px}
+  .gym-toolbar input,.gym-toolbar select{min-width:0;width:100%}
+  .gym-toolbar input[type="search"]{flex-basis:100%}
+}
+
+/* The kiosk: big targets for a tablet at the door, nothing that spins. */
+body.kiosk{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+#kiosk{width:min(720px,100%);padding:28px 20px;text-align:center}
+#kiosk h1{font-size:30px;margin:8px 0;display:flex;flex-direction:column;align-items:center;gap:10px}
+#kiosk .kiosk-logo{height:84px;width:auto;border-radius:10px;padding:8px;background:var(--brand-bar,transparent)}
+#kiosk p{font-size:19px}
+#kiosk input{font-size:26px;padding:16px;text-align:center;margin:12px 0}
+#kiosk .kiosk-names{display:grid;gap:10px;margin-top:12px}
+#kiosk .kiosk-names button,#kiosk .kiosk-classes button{font-size:24px;min-height:72px;width:100%}
+#kiosk .kiosk-classes{display:grid;gap:10px;margin:16px 0}
+#kiosk .kiosk-done{font-size:34px;font-weight:700;color:var(--ok);margin:40px 0 10px}
+#kiosk .kiosk-offline{font-size:26px;font-weight:700;color:var(--danger);margin:40px 0 10px}
+#kiosk .kiosk-pin{max-width:320px;margin:0 auto}
+#kiosk .kiosk-card{font-size:20px;background:var(--st-warn-bg);color:var(--ink);border-radius:14px;padding:14px 18px;margin:18px auto;max-width:520px}
+/* Billing and the switch guide */
+.gym-demo-tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px;background:var(--st-now);color:var(--st-now-ink);vertical-align:middle}
+.gym-sms{background:var(--field);border-radius:16px 16px 16px 4px;padding:12px 14px;margin:10px 0;max-width:420px;overflow-wrap:anywhere}
+.gym-steps{list-style:none;margin:0;padding:0;counter-reset:step}
+.gym-steps>li{position:relative;padding:0 0 22px 52px;counter-increment:step}
+.gym-steps>li::before{content:counter(step);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;
+  display:grid;place-items:center;font-weight:700;background:var(--accent);color:var(--on-accent)}
+.gym-steps>li::after{content:"";position:absolute;left:17px;top:40px;bottom:4px;width:2px;background:var(--line)}
+.gym-steps>li:last-child::after{display:none}
+.gym-steps h3{margin:6px 0 2px;font-size:17px}
+.gym-steps .who{font-size:15px;color:var(--muted);margin:0 0 6px}
+.gym-steps p{margin:0 0 8px}
+.gym-choice{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
+.gym-choice button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.gym-scroll{overflow-x:auto}
+.gym-scroll table{font-size:14px;white-space:nowrap}
+/* The public join page (P2): a plan, a name and an email. The card is typed on Stripe's page. */
+.join-main{width:min(640px,100%);margin:0 auto;padding:24px 16px 48px}
+.join-main h1{font-size:30px;margin:8px 0}
+.join-lead{font-size:19px;margin:0 0 18px}
+.join-form fieldset{border:0;padding:0;margin:0 0 16px;display:grid;gap:10px}
+.join-form legend{font-weight:700;margin-bottom:8px}
+.join-plan{display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer;font-size:18px}
+.join-plan:has(input:checked){border-color:var(--accent)}
+.join-plan input{width:22px;height:22px;accent-color:var(--accent);margin:0}
+.join-plan>span{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;flex:1}
+.join-price{font-weight:700}
+.join-field{display:grid;gap:6px;margin:0 0 14px;font-size:17px}
+.join-field input{font-size:18px;padding:12px;min-height:48px}
+.join-go{width:100%;min-height:56px;font-size:19px;margin-top:6px}
+.join-error{background:var(--st-bad-bg);border-radius:12px;padding:12px 14px}
+.join-note{background:var(--tint);border-radius:12px;padding:12px 14px}
+.join-test{font-size:16px;color:var(--muted);margin-top:22px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

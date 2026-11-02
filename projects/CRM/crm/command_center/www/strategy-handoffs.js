@@ -1,0 +1,19 @@
+/* An operational receipt is distinct from the follow-up a person still needs to do. */
+window.StrategyHandoffs = (() => {
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const words = {preparing:'Preparing', delivering:'Sending to CRM', retrying:'Retry scheduled',
+    delivered:'In CRM', needs_attention:'Needs attention', needs_contact:'Contact details missing', follow_up_due:'Follow-up overdue'};
+  const time = s => s ? new Date(s).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}) : '';
+  function render(data) {
+    const m = data.chat_handoffs;
+    if (!m?.enabled) return '';
+    if (m.restricted) return '<section class="st-handoffs"><h2>Inquiry handoffs</h2><p>Delivery monitoring is available to operators with access to all CRM records.</p></section>';
+    const counts = m.counts || {}, rows = m.items || [];
+    const row = i => {
+      const owner = data.members.find(p => p.id === i.owner)?.name || i.owner || '';
+      return `<article class="st-handoff-row"><div><strong>${esc(i.name)}</strong><small>${esc(time(i.created_at))}${owner ? ' · ' + esc(owner) : ''}</small><span class="st-handoff-state ${['needs_attention','needs_contact','follow_up_due'].includes(i.state) ? 'is-attention' : ''}">${esc(words[i.state] || i.state)}${i.state === 'delivered' ? ' · Follow-up ' + esc(i.task_status || 'unknown') : ''}</span>${i.error ? `<p>${esc(i.error)}</p>` : ''}${i.state === 'needs_contact' ? '<p>The chat was saved, but it has no phone or email for a follow-up.</p>' : ''}${i.next_attempt ? `<p>Next delivery attempt ${esc(time(i.next_attempt))} · ${i.attempts} attempted</p>` : ''}</div><div class="st-actions">${i.task_id ? `<a href="${esc(data.connection?.url || './')}?view=contacts&amp;contact=${encodeURIComponent(i.contact_id)}" target="_blank" rel="noopener">${i.task_status === 'completed' ? 'View follow-up' : 'Open follow-up'} ↗</a>` : ''}${['delivered','needs_contact','follow_up_due'].includes(i.state) ? `<a href="${esc(data.connection?.url || './')}#call=${encodeURIComponent(i.id)}" target="_blank" rel="noopener">Review chat ↗</a>` : ''}<details><summary>Delivery details</summary><small>Inquiry ${esc(i.id)}<br>${i.attempts} attempt${i.attempts === 1 ? '' : 's'}${i.due_at ? '<br>Follow-up due '+esc(time(i.due_at)) : ''}</small></details></div></article>`;
+    };
+    return `<section class="st-handoffs" aria-labelledby="handoffs-title"><div class="st-product-section-head"><div><h2 id="handoffs-title">Inquiry handoffs</h2><small>Website chat → CRM → follow-up</small></div><span class="st-handoff-health ${m.worker_healthy && !m.unreadable ? '' : 'is-attention'}">${m.worker_healthy && !m.unreadable ? 'Monitor running' : 'Monitor needs attention'}</span></div><div class="st-handoff-counts"><span><strong>${counts.delivered || 0}</strong> in CRM</span><span><strong>${counts.retrying || 0}</strong> delivering / retrying</span><span><strong>${counts.attention || 0}</strong> need attention</span></div>${!m.worker_healthy ? '<p class="st-handoff-warning">The delivery worker has not reported recently. Current delivery health is unknown.</p>' : ''}${m.unreadable ? '<p class="st-handoff-warning">A saved inquiry could not be read. Its history is preserved and needs repair.</p>' : ''}${rows.slice(0,5).map(row).join('') || '<p class="st-handoff-empty">Ready for new inquiries. Historical chats are not replayed.</p>'}${rows.length > 5 ? `<details><summary>More handoffs · ${rows.length - 5}</summary>${rows.slice(5).map(row).join('')}</details>` : ''}<small class="st-handoff-footnote">Failed deliveries retry automatically up to five times. Follow-up tasks stay open until someone completes them.</small></section>`;
+  }
+  return {render};
+})();

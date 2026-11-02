@@ -1,0 +1,192 @@
+{
+ "$comment": "Fran McGrath's portfolio CRM (Basic American Enterprises). Built 2026-10-30 from Sam's decisions; regions are a SAMPLE until Fran sets his own. Lives in Fran's repo, never in Custom-Tailored-Agents.",
+ "portfolio": {
+  "id": "basic-american",
+  "name": "Basic American",
+  "timezone": "America/Los_Angeles",
+  "owners": [
+   "fran"
+  ],
+  "currency": "USD"
+ },
+ "people": [
+  {
+   "id": "fran",
+   "name": "Fran McGrath",
+   "role": "admin",
+   "title": "owner",
+   "emails": [
+    "franmcgrath11@gmail.com"
+   ]
+  }
+ ],
+ "territories": {
+  "regions": [
+   {
+    "id": "west",
+    "label": "West",
+    "states": [
+     "AK",
+     "AZ",
+     "CA",
+     "CO",
+     "HI",
+     "ID",
+     "MT",
+     "NM",
+     "NV",
+     "OR",
+     "UT",
+     "WA",
+     "WY"
+    ]
+   },
+   {
+    "id": "central",
+    "label": "Central",
+    "states": [
+     "AL",
+     "AR",
+     "IA",
+     "IL",
+     "IN",
+     "KS",
+     "KY",
+     "LA",
+     "MI",
+     "MN",
+     "MO",
+     "MS",
+     "ND",
+     "NE",
+     "OH",
+     "OK",
+     "SD",
+     "TN",
+     "TX",
+     "WI"
+    ]
+   },
+   {
+    "id": "east",
+    "label": "East",
+    "states": [
+     "CT",
+     "DC",
+     "DE",
+     "FL",
+     "GA",
+     "MA",
+     "MD",
+     "ME",
+     "NC",
+     "NH",
+     "NJ",
+     "NY",
+     "PA",
+     "RI",
+     "SC",
+     "VA",
+     "VT",
+     "WV"
+    ]
+   }
+  ]
+ },
+ "businesses": [
+  {
+   "id": "bae",
+   "label": "BAE",
+   "name": "Basic American Enterprises",
+   "color": "#1d4ed8",
+   "pipelines": [
+    {
+     "id": "investors",
+     "label": "Investors",
+     "stages": [
+      "Intro",
+      "Diligence",
+      {
+       "label": "Committed",
+       "outcome": "won"
+      },
+      {
+       "label": "Passed",
+       "outcome": "lost"
+      }
+     ]
+    },
+    {
+     "id": "distribution",
+     "label": "Distribution",
+     "stages": [
+      "New",
+      "Proposal out",
+      {
+       "label": "Won",
+       "outcome": "won"
+      },
+      {
+       "label": "Lost",
+       "outcome": "lost"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "basic-american-intelligence",
+   "label": "Basic American Intelligence",
+   "name": "Basic American Intelligence",
+   "color": "#7c3aed",
+   "stages": [
+    "New",
+    "Proposal out",
+    {
+     "label": "Won",
+     "outcome": "won"
+    },
+    {
+     "label": "Lost",
+     "outcome": "lost"
+    }
+   ]
+  },
+  {
+   "id": "basic-american-networks",
+   "label": "Basic American Networks",
+   "name": "Basic American Networks",
+   "color": "#b45309",
+   "stages": [
+    "New",
+    "Proposal out",
+    {
+     "label": "Won",
+     "outcome": "won"
+    },
+    {
+     "label": "Lost",
+     "outcome": "lost"
+    }
+   ]
+  },
+  {
+   "id": "ipost-sports",
+   "label": "iPost Sports",
+   "name": "iPost Sports",
+   "color": "#be123c",
+   "stages": [
+    "New",
+    "Proposal out",
+    {
+     "label": "Won",
+     "outcome": "won"
+    },
+    {
+     "label": "Lost",
+     "outcome": "lost"
+    }
+   ]
+  }
+ ]
+}

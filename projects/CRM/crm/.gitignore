@@ -1,0 +1,7 @@
+private/
+*.sqlite3
+*.sqlite3-*
+access.json
+release.tar.gz
+__pycache__/
+.venv/
