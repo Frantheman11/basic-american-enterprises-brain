@@ -34,7 +34,7 @@ Domains and DNS stay at GoDaddy. Nothing is cancelled or sent without Fran's yes
    payment are Fran's to enter.
 4. **Cancel at GoDaddy, everything except domains:** Web Hosting Deluxe, Microsoft 365 / email,
    Proofpoint email security, any SSL or website security add-ons. Keep every domain and its
-   Full Protection. Clean up DNS leftovers (admin, mail, cpanel, whm, webdisk records).
+   Full Protection. Clean up DNS leftovers (admin, mail, cpanel, whm, webdisk records). (Done 2026-11-01 on both domains.)
 
 ## Next brief
 
