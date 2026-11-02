@@ -51,3 +51,4 @@ Please send me a case or ticket number for this request.
 - 2026-11-01: Fran called GoDaddy support (1-480-366-3549). **Case # EM428176.**
 - GoDaddy: the migration (release of the Microsoft 365 tenant) takes **5-7 days**, so expect it about Nov 6-8, before the Nov 12 renewal.
 - 2026-11-01: **Web Hosting Deluxe cancelled** on the same call.
+- Global Admin access will be provided when the migration is complete; GoDaddy emails it to **frantheman11@hotmail.com**.
