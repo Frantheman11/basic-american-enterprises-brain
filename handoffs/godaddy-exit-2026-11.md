@@ -20,7 +20,7 @@ Domains and DNS stay at GoDaddy. Nothing is cancelled or sent without Fran's yes
 
 ## Steps, in order
 
-1. **Basic American Networks to Vercel.** (2026-11-01: text and 19 images captured in projects/BAN-website/SOURCE-2026-11-01.md and site/assets; clean three-page copy built in projects/BAN-website/site, previewed locally; old Contact page was template filler, replaced with config facts. Vercel project ban-website (team ipostsports) created and deployed: https://ban-website-eight.vercel.app. DNS pointed to Vercel 2026-11-01 (backup in projects/BAN-website/dns-before-vercel-2026-11-01.md); waiting for the old records to expire.) Copy only the visible text and images from
+1. **Basic American Networks to Vercel.** (2026-11-01: text and 19 images captured in projects/BAN-website/SOURCE-2026-11-01.md and site/assets; clean three-page copy built in projects/BAN-website/site, previewed locally; old Contact page was template filler, replaced with config facts. Vercel project ban-website (team ipostsports) created and deployed: https://ban-website-eight.vercel.app. DNS pointed to Vercel 2026-11-01 (backup in projects/BAN-website/dns-before-vercel-2026-11-01.md); live on Vercel over https 2026-11-01 (old records expired). Step 1 done.) Copy only the visible text and images from
    basicamericannetworks.com (never the old WordPress files: the old GoDaddy sites were hacked).
    Build a clean static site, new Vercel project in team ipostsports, Fran reviews it on a vercel.app
    address, then point basicamericannetworks.com DNS at Vercel (website records only).
