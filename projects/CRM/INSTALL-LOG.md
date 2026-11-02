@@ -34,7 +34,7 @@ No secrets in this file. Guide: `START-HERE.md`.
 
 ## Still to do
 
-- Sign-in page offers only "Sign in with Cloudflare". Add One-time PIN (email code) before reps join.
+- Done 2026-11-01: One-time PIN (email code) added as a login method; the sign-in page shows an email box plus "Sign in with Cloudflare". A new rep still needs their email added to the "Fran" policy (or a new policy) and to the CRM profiles.
 - Remove the GoDaddy parked-page records Cloudflare imported (A/CNAME/TXT on basicamericancrm.com).
 - Optional: rename the team domain yellow-star-31c7; DigitalOcean backups (extra cost).
 - 5: walk-through of the CRM; save to GitHub with Fran's yes.
