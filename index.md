@@ -32,6 +32,7 @@ If Python is missing, edit it by hand, one line per page; the next rebuild repla
 
 - [Websites: three sites, one brief](handoffs/websites-2026-10.md) - started 2026-10-08; draft only
 - [Desktop setup](handoffs/desktop-setup-2026-10.md) - run the brain on the Windows desktop; started 2026-10-19
+- [Leave GoDaddy except domains](handoffs/godaddy-exit-2026-11.md) - BAN site to Vercel, email move, cancel the rest; started 2026-11-01
 
 ## Foundation
 

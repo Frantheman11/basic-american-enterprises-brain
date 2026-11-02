@@ -12,7 +12,7 @@ One line per open item: `- [ ] what · for whom · by when`. Done items get `[x]
 - [ ] Website changes: revise basicamericanenterprises.com, build Basic American Intelligence, revise basicamericannetworks.com (handoffs/websites-2026-10.md) · Fran · [date TO CONFIRM]
 - [ ] Website round four, last open items (projects/BAE-website/ROUND-FOUR.md): pick the logo (review/bae-logo-options.html) (Block Battery and BlackMP lines done 2026-11-01) · Fran · [date TO CONFIRM]
 - [ ] Website forms: create a form in Web3Forms (account made 2026-11-01), paste its access key into projects/BAE-website/site/assets/send.js, test, publish · Fran · [date TO CONFIRM]
-- [ ] Cancel the GoDaddy website hosting plan only (keep the domain, DNS and Microsoft 365 email); the site moved to Vercel 2026-11-01 · Fran · before the hosting renews
+- [ ] Leave GoDaddy except domains: Basic American Networks site to Vercel, email to a new provider, then cancel hosting, email and add-ons (handoffs/godaddy-exit-2026-11.md); Web Hosting Deluxe auto-renews 11/11/2026 and still serves basicamericannetworks.com · Fran · before 2026-11-11
 - [ ] Send Sam the website wireframe Fran has in mind (call notes 2026-10-01) · Fran · [date TO CONFIRM]
 - [ ] Block Battery and BlackMP stay in the portfolio (Fran, 2026-10-31); still to confirm: how each venture relates to Basic American Enterprises (owned, incubated, invested) · Fran · [date TO CONFIRM]
 - [ ] Set up the Windows desktop to run the brain (Drive, Outlook, Claude, GitHub copy, move the scheduled check): handoffs/desktop-setup-2026-10.md · Fran · [date TO CONFIRM]
