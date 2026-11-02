@@ -88,13 +88,13 @@ Sites, so copy anything wanted out of the basicamericanenterprises.com OneDrive 
   OneDrive app installed with winget 2026-11-01 to copy them to G:\My Drive\Backups\OneDrive-basicamericanenterprises\.
   **Fran does not want the OneDrive app kept on the laptop: uninstall it (and remove the business account and
   its local copy) once the copy is verified.**
-- Final home for both backups (Fran, 2026-11-01): one folder, **G:\My Drive\BAE Backup 2026-11-01\**, with the
+- Final home for both backups (Fran, 2026-11-01): one folder, **G:\My Drive\Claude Projects\BAE Backup 2026-11-01\**, with the
   mailbox .pst and the OneDrive files keeping their own subfolders. The temporary
   G:\My Drive\Backups\OneDrive-basicamericanenterprises\ is moved into it and removed.
 
 ## Backups done (2026-11-01)
 
-- **G:\My Drive\BAE Backup 2026-11-01\** holds everything:
+- **G:\My Drive\Claude Projects\BAE Backup 2026-11-01\** holds everything:
   - fran-basicamericanenterprises-email-backup-2026-11-01.pst (2.6 GB, exact copy checked by SHA-256; every
     mailbox folder including Calendar 208, Contacts 57, Drafts 37; only Outlook's "Sync Issues" logs left out).
     A second copy stays at C:\Users\Fran McGrath\Documents\Outlook Files\...-full.pst until Drive has uploaded it.
