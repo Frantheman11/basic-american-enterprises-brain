@@ -81,6 +81,8 @@ def business(entry, snap, now, end_of_today):
             "tasks": {"overdue": overdue, "due_today": due_today},
             "new_contacts": sum(1 for c in snap["contacts"]
                                 if c.get("kind") != "business" and _when(c["created_at"]) >= since),
+            # Fran 2026-11-01 (local change, not in Sam's release): every contact, not only the last 7 days
+            "contacts": sum(1 for c in snap["contacts"] if c.get("kind") != "business"),
             "_rows": rows}
 
 
@@ -112,6 +114,7 @@ def read(pf, seen, now=None):
                        "overdue": sum(c["tasks"]["overdue"] for c in cols),
                        "due_today": sum(c["tasks"]["due_today"] for c in cols),
                        "new_contacts": sum(c["new_contacts"] for c in cols),
+                       "contacts": sum(c["contacts"] for c in cols),
                        # P4: people linked across businesses, counting only records this person sees
                        "linked_people": portfolio_links.count_linked(pf, visible)},
             "tasks": rows[:TASK_LIMIT], "tasks_more": max(0, len(rows) - TASK_LIMIT)}
@@ -147,7 +150,8 @@ def render(data, prof, base, theme_key):
     summary = (f'<div class="pr-totals"><div>{value}</div>'
                f'<div><strong>{tot["overdue"]}</strong><small>tasks overdue</small></div>'
                f'<div><strong>{tot["due_today"]}</strong><small>tasks due today</small></div>'
-               f'<div><strong>{tot["new_contacts"]}</strong><small>new contacts, last {NEW_DAYS} days</small></div></div>')
+               f'<div><strong>{tot["contacts"]:,}</strong><small>contacts in all</small></div>'
+               f'<div><strong>{tot["new_contacts"]:,}</strong><small>new contacts, last {NEW_DAYS} days</small></div></div>')
     cards = []
     for c in cols:
         d = c["deals"]
@@ -167,7 +171,8 @@ def render(data, prof, base, theme_key):
             f'<ul class="pr-lanes{" lined" if len(d["pipelines"]) > 1 else ""}" aria-label="Open deals by stage">{lanes}</ul>'
             f'<dl class="pr-stats"><div><dt>Overdue</dt><dd data-k="overdue" class="{"late" if c["tasks"]["overdue"] else ""}">{c["tasks"]["overdue"]}</dd></div>'
             f'<div><dt>Due today</dt><dd data-k="due-today">{c["tasks"]["due_today"]}</dd></div>'
-            f'<div><dt>New contacts</dt><dd data-k="new-contacts">{c["new_contacts"]}</dd></div></dl></section>')
+            f'<div><dt>Contacts</dt><dd data-k="contacts">{c["contacts"]:,}</dd></div>'
+            f'<div><dt>New, {NEW_DAYS} days</dt><dd data-k="new-contacts">{c["new_contacts"]:,}</dd></div></dl></section>')
     items = []
     for t in data["tasks"]:
         c = by_id[t["business"]]

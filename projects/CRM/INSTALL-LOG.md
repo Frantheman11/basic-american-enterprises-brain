@@ -38,3 +38,17 @@ No secrets in this file. Guide: `START-HERE.md`.
 - Remove the GoDaddy parked-page records Cloudflare imported (A/CNAME/TXT on basicamericancrm.com).
 - Optional: rename the team domain yellow-star-31c7; DigitalOcean backups (extra cost).
 - 5: walk-through of the CRM; save to GitHub with Fran's yes.
+
+## Local changes to Sam's engine (re-apply after each new release from Sam)
+
+- 2026-11-01 (Fran): dashboard shows a permanent contact total. `command_center/portfolio_rollup.py`
+  (`contacts` per business and in totals; "contacts in all" box; card shows Contacts and "New, 7 days")
+  and `command_center/www/portfolio-rollup.css` (`.pr-stats` 2 columns). Deployed with refresh-portfolio.sh
+  (code only), release crm-20261101-2247; previous releases kept on the server. Tested first on a copy.
+  Deploy without Python: tar the crm/ folder (no private/, caches, databases), upload as release.tar.gz with
+  deploy/refresh-portfolio.sh, run it with PORTFOLIO=basic-american SLUG=basic-american DATE=<stamp>.
+
+## Imports
+
+- 2026-11-01: iPost Sports 3,457 (alumni (1).csv). Basic American Intelligence 6,952 from the Loyola
+  directory (Claude Projects/Loyola Alum CSV/For import, parts 1-3; "63 to 91" and name-only rows left out).
