@@ -25,6 +25,19 @@ email); the laptop can sleep and is used on the go. No migration: the same folde
    turn it off on the laptop, so only one machine checks.
 6. Test the send-email skill on the desktop: `-Action accounts`, and a discarded test draft.
 7. Desktop power settings: never sleep when plugged in (Fran changes this himself).
+8. CRM server key (Fran asked 2026-11-01). The CRM server is 147.182.238.159 (projects/CRM/INSTALL-LOG.md).
+   The laptop's key never travels: the desktop makes its own, and the server is told to trust it.
+   a. On the desktop, in Git Bash:
+      `ssh-keygen -t ed25519 -f ~/.ssh/basic-american_crm -N "" -C "basic-american crm desktop"`
+      (the user folder is C:\Users\Intel; quote paths that contain spaces). Show Fran only the `.pub` line.
+   b. Fran adds that one public line to the server, either way:
+      - DigitalOcean: Droplets, basic-american-crm, Access, Launch Droplet Console (signs in as root
+        in the browser). Paste: `echo '<the .pub line>' >> /root/.ssh/authorized_keys`
+      - or save the `.pub` line (public, safe) as `handoffs/crm-desktop-key.pub` and ask a laptop
+        session to append it to /root/.ssh/authorized_keys over SSH; then delete that file.
+   c. Check from the desktop: `ssh -i ~/.ssh/basic-american_crm -o StrictHostKeyChecking=accept-new root@147.182.238.159 "uname -a"`
+   d. Never put the private key file in Google Drive, the brain, a note or a chat. Note "done" here.
+   e. For CRM setup changes the desktop also needs Python (`winget install Python.Python.3.12`).
 
 ## Done on the desktop (session 2026-10-28 to 2026-10-31)
 - Step 1 done: Google Drive for desktop runs; the brain opens at G:\My Drive\basic-american-enterprises-brain.
@@ -38,5 +51,5 @@ email); the laptop can sleep and is used on the go. No migration: the same folde
   to GitHub once; first push from the desktop worked. Both folders added to git's safe.directory.
 
 ## Not done
-- Steps 2, 5, 6, 7. Scheduled task file-sam-website-reply is off since 2026-10-20 (Sam correspondence shut off).
+- Steps 2, 5, 6, 7, 8 (CRM server key). Scheduled task file-sam-website-reply is off since 2026-10-20 (Sam correspondence shut off).
 - Sessions do not sync between computers; this handoff and log.md carry the work across.
