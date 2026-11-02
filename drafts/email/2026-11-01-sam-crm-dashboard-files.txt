@@ -1,0 +1,14 @@
+Sent 2026-11-01 (Outlook removed portfolio_rollup.py; the patch and the .css arrived)
+
+Hi Sam,
+
+As promised, here is the dashboard change so you can add it to the master code. Three files are attached:
+
+1. dashboard-contact-count.patch: the change as a git patch against your release basic-american-crm-2026-10-30. From the folder that holds command_center/, run: git apply dashboard-contact-count.patch (it applies cleanly to the original files).
+2. portfolio_rollup.py: the full changed file (command_center/portfolio_rollup.py).
+3. portfolio-rollup.css: the full changed file (command_center/www/portfolio-rollup.css).
+
+In short: a permanent "contacts" count per business and in the totals, shown as "contacts in all" at the top of All businesses and as "Contacts" on each business card, beside "New, 7 days". The card stats sit in a 2 x 2 grid.
+
+Thanks,
+Fran
