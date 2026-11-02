@@ -104,3 +104,9 @@ Sites, so copy anything wanted out of the basicamericanenterprises.com OneDrive 
 - OneDrive app uninstalled; the local business OneDrive folder and its account entry removed. Fran's personal
   OneDrive folder (frantheman11@hotmail.com) untouched. Files still in OneDrive online are left alone; they go when
   the tenant moves to Exchange Online Plan 1.
+
+## GoDaddy support call (2026-11-01)
+
+- Fran called GoDaddy support about the Microsoft 365 defederation. **Case # EM428176.**
+- **Web Hosting Deluxe cancelled** on the call (Fran, 2026-11-01). Both websites already run on Vercel.
+- GoDaddy says the migration takes **5-7 days** (about Nov 6-8, before the Nov 12 renewal). Next: when released, buy Exchange Online Plan 1 from Microsoft in the same tenant, switch sign-in from GoDaddy to Microsoft, update MX/SPF, test, then cancel GoDaddy email and hosting.
