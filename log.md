@@ -68,3 +68,4 @@ One line per change, newest last: date · what · from where.
 - 2026-11-01: removed old hosting DNS records (cpanel, webdisk, webdisk.admin, whm, www.admin) on both domains; admin and mail were already gone. Sites and MX checked.
 - 2026-11-01: CRM installed: crm.basicamericancrm.com (DigitalOcean droplet 147.182.238.159, Cloudflare Access + Tunnel). Setup and log in projects/CRM.
 - 2026-11-01: Google Drive: new top folder "Claude Projects"; the backup moved to G:\My Drive\Claude Projects\BAE Backup 2026-11-01 (2,739 files, checked). The brain stays where it is; Loyola Alum untouched (Fran).
+2026-11-01 · emailed Sam Briones re CRM live and dashboard contact count for the master code, from fran@basicamericanenterprises.com; approved by Fran in chat ("Send") · Fran, in chat

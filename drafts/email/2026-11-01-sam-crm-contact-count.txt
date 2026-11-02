@@ -1,0 +1,22 @@
+Sent 2026-11-01
+
+Hi Sam,
+
+Good news: the CRM is live at https://crm.basicamericancrm.com, installed with your kit on my own DigitalOcean server behind Cloudflare Access. Thank you, it went in smoothly.
+
+One request for the master code. I made a small change to the All businesses dashboard so it shows a permanent contact count, not only "new contacts, last 7 days". Please build it into the main engine so your next release keeps it.
+
+What I changed (release basic-american-crm-2026-10-30):
+
+1. command_center/portfolio_rollup.py
+   - business(): a new "contacts" count per business: every contact whose kind is not "business" (the same filter as new_contacts, without the 7-day limit).
+   - read(): totals["contacts"] = the sum across businesses.
+   - render(): a new box at the top, "<n> contacts in all", before "new contacts, last 7 days"; each business card now shows "Contacts" and "New, 7 days" (numbers with thousands separators).
+
+2. command_center/www/portfolio-rollup.css
+   - .pr-stats: grid-template-columns: repeat(2,1fr), so the four numbers on each card sit in a 2 x 2 grid.
+
+It is deployed and checked on desktop and phone. Happy to send the exact files if that helps.
+
+Thanks,
+Fran
