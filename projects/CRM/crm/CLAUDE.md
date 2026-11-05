@@ -11,7 +11,7 @@ It runs on Fran's own server (147.182.238.159). The records live on that server,
 | `data/command-center/<business>.json` | yours: one profile per business (people, roles, pipelines, stages, regions, colors) | yes |
 | `data/command-center/portfolios/basic-american.json` | yours: the tabs, their order, labels and colors, the owners | yes |
 | `brand.css` and other brand files here | yours | yes |
-| `command_center/` | the engine, from Custom Tailored Agents. `ENGINE-RELEASE.json` lists every file | **no**: the next release replaces it. Ask Sam for engine changes |
+| `command_center/` | the engine. It came from Custom Tailored Agents and is now Fran's own copy (decision 2026-11-04). `ENGINE-RELEASE.json` lists the original files | yes: note each change in `../INSTALL-LOG.md`, test on a copy first |
 | `deploy/` | the deploy tools | no |
 | `private/` | local test databases | never commit it |
 
@@ -32,16 +32,16 @@ python -B -c "from command_center import portfolio; portfolio.load('basic-americ
 
 - **A stage name or order:** on the live CRM, use Pipeline, Edit stages (it saves on the server at once).
   Once someone edits stages on the screen, the server's list wins over `pipeline.stages` in the profile.
-  To change stages from here instead, edit `pipeline.stages` and ask Sam to clear the screen list.
+  To change stages from here instead, edit `pipeline.stages` and clear the screen list on the server.
 - **A second pipeline in a business:** add `pipeline.pipelines` and a `pipeline` on each stage. Stage ids
   stay unique in the business. Every pipeline keeps at least one open stage.
 - **A person:** add them to `people.members` in each business they work in, with `role` (`admin` sees all,
   `rep` sees their own, `territory_lead` sees their own plus their `territory`) and their sign-in `emails`.
-  **Then ask Sam to add the email to the sign-in** (Cloudflare Access); without that they cannot get in.
+  **Then add the email to the sign-in** (Cloudflare Access, in Fran's account); without that they cannot get in. Agents: one company each, role `rep`. Add the person here too, because a setup sync replaces the server's list with these files.
 - **Regions:** `crm.territories.regions` in each profile; a person's `territory` is `["WI"]` or `["region:west"]`.
 - **A business:** the "+" button on the live CRM copies a business's setup into a new tab. It lives on the
   server; to keep it in this repo too, copy its profile and portfolio entry here.
-- **Removing a business:** ask Sam. Deploying never removes a tab or its records; a business missing
+- **Removing a business:** ask Fran first. Deploying never removes a tab or its records; a business missing
   from this repo is kept on the server.
 
 ## Deploy a change
@@ -66,6 +66,4 @@ Every night at 10:30 UTC the server copies every database to `/var/lib/crm/backu
 
 - Commit `private/`, a database, a password, a token or `access.json`.
 - Edit files on the server by hand. Change them here and deploy.
-- Change `command_center/`. Ask Sam.
-
-Help: Sam Briones.
+- Take a new release from Sam without Fran's yes. It would overwrite local engine changes.

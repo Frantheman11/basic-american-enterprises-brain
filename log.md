@@ -70,3 +70,4 @@ One line per change, newest last: date · what · from where.
 - 2026-11-01: Google Drive: new top folder "Claude Projects"; the backup moved to G:\My Drive\Claude Projects\BAE Backup 2026-11-01 (2,739 files, checked). The brain stays where it is; Loyola Alum untouched (Fran).
 2026-11-01 · emailed Sam Briones re CRM live and dashboard contact count for the master code, from fran@basicamericanenterprises.com; approved by Fran in chat ("Send") · Fran, in chat
 2026-11-01 · emailed Sam Briones the CRM dashboard change (patch + css; Outlook stripped the .py) from fran@basicamericanenterprises.com; approved by Fran in chat ("Send") · Fran, in chat
+2026-11-04 · CRM decision: Fran's instance is independent of Sam's master code and needs no management from Sam; agents get one company each, Fran stays admin · Fran, in chat

@@ -13,3 +13,4 @@ Open to-dos do not go here.
 - [Permission: file Sam's reply](permission-file-sam-reply.md) — Fran's advance OK to find and file Sam's website-files reply; weekday 8 am scheduled check; never replies (2026-10-18); check disabled 2026-10-20 (email hold on Sam)
 - [BAE website project](bae-website-project.md) — new site lives in projects/BAE-website (moved from the Desktop 2026-10-28); read its PROJECT-CONTEXT.md; Sam's facts that differ from config (2026-10-19); Sam on hold until Fran invites him (2026-10-20)
 
+- [CRM is Fran's own](crm-independent-of-sam-2026-11.md) — separate instance on Fran's server, Fran changes the code, not on Sam's master code and no management from Sam; partners, separate businesses (2026-11-04)

@@ -10,6 +10,8 @@ No secrets in this file. Guide: `START-HERE.md`.
 - Address: https://crm.basicamericancrm.com. Kit files updated to it; `release.tar.gz` rebuilt with Sam's
   exact 193-file list (only `CLAUDE.md` text changed).
 - Not using Vercel for the CRM: the engine's sign-in only accepts Cloudflare Access.
+- 2026-11-04 (Fran, after speaking with Sam): this CRM is Fran's own instance on Fran's server. It is not on Sam's master code and does not need Sam to manage it. Note: `memory/crm-independent-of-sam-2026-11.md`.
+- 2026-11-04 (Fran): Access model for all tabs. Fran is admin everywhere. Each agent is listed only under the company they work for, with role `rep`. Tested on a temporary server copy (sign-in check stubbed): an agent gets one tab, is refused the others, and sees only contacts assigned to them.
 
 ## Checklist
 
@@ -30,7 +32,7 @@ No secrets in this file. Guide: `START-HERE.md`.
 
 ## Open questions
 
-- The guide says to email Sam at several points. Do not, unless Fran says yes in chat.
+- The guide says to email Sam at several points. No longer needed (decision 2026-11-04).
 
 ## Still to do
 
@@ -39,7 +41,7 @@ No secrets in this file. Guide: `START-HERE.md`.
 - Optional: rename the team domain yellow-star-31c7; DigitalOcean backups (extra cost).
 - 5: walk-through of the CRM; save to GitHub with Fran's yes.
 
-## Local changes to Sam's engine (re-apply after each new release from Sam)
+## Local changes to the engine (Fran's own code; re-apply only if Fran ever takes a new release from Sam)
 
 - 2026-11-01 (Fran): dashboard shows a permanent contact total. `command_center/portfolio_rollup.py`
   (`contacts` per business and in totals; "contacts in all" box; card shows Contacts and "New, 7 days")
