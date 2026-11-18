@@ -49,8 +49,41 @@ No secrets in this file. Guide: `START-HERE.md`.
   (code only), release crm-20261101-2247; previous releases kept on the server. Tested first on a copy.
   Deploy without Python: tar the crm/ folder (no private/, caches, databases), upload as release.tar.gz with
   deploy/refresh-portfolio.sh, run it with PORTFOLIO=basic-american SLUG=basic-american DATE=<stamp>.
+- 2026-11-17 (Fran): bulk assign of contacts (a patch from Sam, applied by Fran's Claude Code on the desktop). New files:
+  `command_center/contact_bulk.py`, `command_center/www/contact-bulk.js`, `command_center/www/contact-bulk.css`.
+  Small additions to `strategy_work.py`, `crm_events.py`, `crm_page.py`, `server.py` and `www/crm.js`. No schema change.
+  Command `contact.assign_bulk`, limit 5,000 contacts for each save, administrators only.
+  First rep: Dustin Padgett (id dustin, dustin@ipostsports.com), role rep, listed in `ipost-sports.json` only;
+  deployed with --sync-setup, release crm-20261117-2142 (confirmed in the server's ipost-sports.json only).
+  Cloudflare Access: policy "Reps" (Allow, Emails = dustin@ipostsports.com) added to app "Fran CRM" by Fran,
+  2026-11-17; the app now shows Fran + 1 other policy.
+  Deployed with push_release.py --sync-setup, release crm-20261117-2139 (old release crm-20261101-2247 kept;
+  backup /var/lib/crm/backups/pre-refresh-20261117-2139).
+  Before the change: `crm-before-bulk-assign/` (a copy of crm/). Check: `check_bulk_assign.py`, 77 of 77 passed.
+- 2026-11-17: the desktop has its own server key (~/.ssh/basic-american_crm, comment "basic-american crm desktop"),
+  added to the server by Fran in the DigitalOcean console. Python 3.12 installed on the desktop. Both computers can deploy.
 
 ## Imports
 
+- 2026-11-17: iPost Sports +374 Placer County HS coaches (Claude Projects/Placer HS Coaches/placer_hs_coaches_crm_ready.csv,
+  378 rows cleaned from the 379-row unique-emails file). Done through the CRM's own Import contacts screen (in the
+  app's browser pane; SSH from Claude was blocked). Source channel "Web research", Source campaign
+  "Placer County HS coaches (2026-11-17)", duplicates skipped: 4 (3 Del Oro coaches' second team mailbox, and
+  Daniel Carbajal, already one of Dustin's). 0 failed; the CRM made its own backup before the first new contact.
+  All 374 assigned to Dustin Padgett with the bulk Assign button. Dustin now has 947 (573 + 374).
+
+- 2026-11-17: iPost Sports alumni (3,457) removed with contact.delete (soft, restorable from the removed list); backup
+  private/backups/ipost-sports-20261118T063222Z-before-alumni-removal.sqlite3. iPost now: Dustin's 573 only.
+  Dustin's access verified on a throwaway copy of live: 14/14 (one tab, own 573 only, 403 elsewhere, no roll-up/export).
+- 2026-11-17: Basic American Intelligence +1,182 iPost Sports alumni that BAI did not have by name or email
+  (Fran: "all of the alumni" in BAI). Source campaign "iPost Sports alumni (copied 2026-11-17)". 455 of them
+  share a phone number with an existing BAI contact (about 170 with the same last name): created anyway, may
+  hold duplicates. BAI now 8,134. Backup: private/backups/basic-american-intelligence-20261118T063028016913Z-before-import.sqlite3.
+- 2026-11-17: iPost Sports 573 Sacramento County HS coaches (Claude Projects/Sacramento HS Coaches,
+  unique-emails file; titles cut to 60 characters, school in Address; Source channel "Web research",
+  Source campaign "Sacramento County HS coaches (2026-11-03)"; 17 likely duplicates created anyway, mostly a
+  shared office phone). All 573 assigned to Dustin Padgett with contact.assign_bulk. Run on the server with the
+  engine's own crm_io import (tested first on a copy). Backup before import:
+  private/backups/ipost-sports-20261118T061728595079Z-before-import.sqlite3. Placer County list: not found.
 - 2026-11-01: iPost Sports 3,457 (alumni (1).csv). Basic American Intelligence 6,952 from the Loyola
   directory (Claude Projects/Loyola Alum CSV/For import, parts 1-3; "63 to 91" and name-only rows left out).
